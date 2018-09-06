@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+<!--<form action="http://127.0.0.1:8080" method="get">-->
+    用户名:<input type="text" id="user" name="username">
+    密码:<input type="password" id="pass" name="password">
+    <input id="btn" type="button" value="提交"/>
+    <p id="text"></p>
+
+<!--</form>-->
+
+<script type="text/javascript">
+    $(function () {
+        $('#btn').on('click',function () {
+            $.ajax({
+                url:'http://127.0.0.1:8080',
+                type:'get',
+                dataType:'jsonp',
+                jsonp:'callback',
+                jsonpCallback:"showdata",
+                data:{
+                    username:$('#user').val(),
+                    password:$('#pass').val()
+                }
+            }).done(function (result) {
+                console.log('调用');
+            });
+        });
+        function showdata(data){
+            console.log(data);
+            var data=JSON.stringify(data);
+            $('#text').html(data)
+        }
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
