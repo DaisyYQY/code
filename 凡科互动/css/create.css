@@ -1,0 +1,717 @@
+body{
+    color: #585858;
+    font-size:14px;
+    font-family:'微软雅黑',Arial,Helvetica,sans-serif;
+    text-align: left;
+}
+html::-webkit-scrollbar {/*滚动条整体样式*/
+    width:4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height:4px;
+}
+html::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius:5px;
+    -webkit-box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
+    background:rgba(0,0,0,0.2);
+}
+html::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius:0;
+    background:rgba(0,0,0,0.1);
+}
+#editActContainer{
+    padding: 28px;
+    box-sizing: border-box;
+}
+.containerTitle{
+    position: relative;
+    height:48px;
+    line-height: 48px;
+    font-size: 16px;
+    padding-left:16px;
+}
+.editActive{
+    background:#fff;
+    padding-bottom:40px;
+    border:1px solid #e7e7e7;
+}
+.actListTitle{
+    font-size: 16px;
+    line-height:16px;
+    padding:10px 0 20px 15px;
+    color: #949494;
+    padding-left: 2px;
+}
+.titleBtnBox{
+    position: absolute;
+    bottom:10px;
+    right:0;
+    height:36px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+}
+.actListTitle .icon{
+    display: inline-block;
+    width:8px;
+    height:8px;
+    border-left:1px solid #585858;
+    border-top:1px solid #585858;
+    vertical-align: middle;
+    margin-top:-3px;
+    margin-right:4px;
+    transform:rotate(-45deg);
+    background:url("../img/iconAll.png")no-repeat;
+}
+#cancelButton{
+    text-decoration:underline;
+    color: #585858;
+    display: inline-block;
+    margin-right:8px;
+}
+.ng-name{
+    display: inline-block;
+    margin-left:8px;
+}
+.savePubButon{
+    float: left;
+    padding:0 12px;
+    margin-left: 8px;
+    background: #329fea;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+}
+.savePubButon .icon{
+    width:24px;
+    height:24px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url("../img/iconAll.png")no-repeat -164px -616px;
+}
+.saveButon{
+    float: left;
+    padding:0 12px;
+    margin-left: 8px;
+    cursor: pointer;
+    background:#b1b1b1;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+}
+.saveButon .icon{
+    width:24px;
+    height:24px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url("../img/iconAll.png")no-repeat -212px -617px;
+}
+.topBarWrap{
+    width:100%;
+    height:56px;
+    border-bottom:1px solid #e7e7e7;
+    margin-bottom:10px;
+    background:#fff;
+}
+.topBarSrollBox{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.topBar{
+    width:10145px;
+    position: relative;
+    left:0;
+    transition:left .1s;
+}
+.topBar .column{
+    width:88px;
+    height:100%;
+    line-height:56px;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 2px;
+    text-align:center;
+}
+.topBar .column.checked{
+    color:#19a6ff;
+}
+.topBar .column .name{
+    line-height:56px;
+    text-align: center;
+    cursor: pointer;
+}
+.topBar .column.checked .name{
+
+}
+.slideBar{
+    width:100%;
+    height:7px;
+    position: relative;
+}
+#topBardSlide{
+    position:absolute;
+    width:88px;
+    height:4px;
+    top:-4px;
+    background:#19a6ff;
+    transition: left .5s cubic-bezier(0.175,0.885,0.320,1.325);
+}
+.scrollIcon{
+    width:16px;
+    height:30px;
+    position: absolute;
+    top:12px;
+    cursor: pointer;
+    background:url("../img/iconAll.png")no-repeat;
+    display: none;
+}
+.scrollLeft{
+    left:0;
+    background-position:-774px -771px;
+}
+.scrollRight{
+    right:0;
+    background-position:-824px -771px;
+}
+.editContent{
+    margin-left:35px;
+}
+.editDetailBox{
+    margin-top:15px;
+    position: relative;
+}
+.phone{
+    width:348px;
+    height:650px;
+    vertical-align:top;
+    display: inline-block;
+    position:absolute;
+    border-radius:5px;
+    background:url("../img/phone.png")no-repeat;
+    background-size:100%;
+}
+.wxTitle{
+    margin:30px auto 0;
+    width:320px;
+    height:64px;
+    background:url("../img/wxTitle.png");
+    background-size:100%;
+    position: relative;
+}
+.wxTitle .actName{
+    font-size:18px;
+    color: #fff;
+    text-align:center;
+    height:20px;
+    line-height:20px;
+    width:210px;
+    position:absolute;
+    bottom:9px;
+    left:65px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.changeBtn{
+    width:27px;
+    height:48px;
+    cursor: pointer;
+    background:rgba(0,0,0,.4);
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+#changeLeft{
+    left:-13px;
+    border-bottom-left-radius:4px;
+    border-top-left-radius:4px;
+}
+#changeRight{
+    right:-13px;
+    border-bottom-right-radius:4px;
+    border-top-right-radius:4px;
+}
+#gameContent{
+    position: relative;
+    width:320px;
+    height:504px;
+    margin:0 auto;
+}
+#gamePreviewPage{
+    width:100%;
+    height:100%;
+}
+.phoneHolder{
+    width:348px;
+    height:650px;
+    display:inline-block;
+    vertical-align: top;
+}
+.editDetail{
+    display: inline-block;
+    width:603px;
+    margin-left:30px;
+    padding:0 5px;
+    position: relative;
+}
+#activeTab{
+    font-size: 0;
+    background-color:#f5f5f5;
+}
+.tabSetting{
+    font-size:14px;
+    display: inline-block;
+    width:25%;
+    height:40px;
+    line-height:40px;
+    color: #000;
+    /*background:#aeaeae;*/
+    text-align: center;
+    cursor: pointer;
+}
+.tabSetting.checked{
+    color: #fff;
+    background:#3896dc;
+}
+.awardErrDot{
+    display: none;
+    position: absolute;
+    top:0;
+    right:0;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background-color:#f00;
+}
+#baseSetting{
+    margin-top:20px;
+}
+.underLineWay{
+    padding-bottom:10px;
+    border-bottom:1px dashed #dcdcdc;
+    margin:0 11px 10px 30px;
+}
+.fontWeight{
+    font-weight:bold;
+}
+.leftTitle{
+    display: inline-block;
+    width:136px;
+    text-align: right;
+    padding-right:16px;
+}
+
+.leftTitle .flag{
+    display: inline-block;
+    width:14px;
+    vertical-align: middle;
+    font-size:16px;
+    color: #fe896a;
+}
+#name{
+    height:44px;
+    box-sizing: border-box;
+    border:1px solid #e7e7e7;
+    outline: none;
+    padding-left:8px;
+    width:436px;
+    font-family:'微软雅黑';
+    display: inline-block;
+}
+.inputError{
+    display: none;
+    margin-left:156px;
+    color: #f00;
+    line-height:20px;
+}
+#setGameTimeBox{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+#beginTime,#endTime{
+    width:207px;
+    height:44px;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline:none;
+    border:1px solid #e7e7e7;
+    padding-left:8px;
+    display: inline-block;
+    margin-right:8px;
+}
+#endTime{
+    margin-left:5px;
+    margin-right:0px;
+}
+#setLimitJoinNumBox{
+    margin-bottom:10px;
+}
+#joinNumBox{
+    position: relative;
+    margin:16px 0 0;
+    min-height:35px;
+}
+.baseLine1{
+    margin-bottom:20px;
+    margin-top:16px;
+    min-height:35px;
+    line-height:46px!important;
+    position: relative;
+}
+.ng-prisyine{
+    display: none;
+}
+label{
+    display: inline-block;
+    padding-left:16px;
+    margin-right:7px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: visible;
+    white-space:nowrap;
+    float: none;
+    font-size:14px;
+}
+label:before{
+    content: '';
+    display: inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    border:1px solid #ccc;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+}
+label.checked:after{
+    content: '';
+    display: inline-block;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#329fea;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+    margin-left:3px;
+}
+.commMg{
+    margin-left:156px;
+}
+.explain{
+    display: inline-block;
+    color: #808080;
+    margin-top:5px;
+}
+#virtualJoinNum{
+    display: inline-block;
+    width:52px;
+    height:44px;
+    padding-left:8px;
+    outline:none;
+    border:1px solid #e7e7e7;
+    margin:0 5px;
+    box-sizing:border-box;
+}
+.editContent .baseLine1{
+    margin:16px 0 0;
+    min-height:35px;
+}
+.editContent .joinNumLimit{
+   margin-bottom:20px;
+}
+.hide{
+    display: none;
+}
+.powerIcon{
+    display: inline-block;
+    width:21px;
+    height:20px;
+    color:#fe896a;
+    font-size:16px;
+    margin-top:-5px;
+    vertical-align: middle;
+    background:url("../img/iconAll.png")-262px -617px no-repeat;
+}
+#theLimitRegNum_new{
+    width:52px;
+    height:44px;
+    margin:0 5px;
+    box-sizing: border-box;
+    border:1px solid #e7e7e7;
+    outline:none;
+    padding-left:8px;
+    display: inline-block;
+}
+.openclose{
+    display: none;
+}
+.aTips{
+    margin-left:10px;
+    color: #74b7e6;
+    text-decoration: underline;
+}
+.verTipsBox{
+    min-height:35px;
+}
+.seniorSetBox{
+    position: relative;
+    transition:all .3s;
+}
+.seniorSetBoxOption{
+    cursor:pointer;
+    position: relative;
+    margin-bottom: 10px;
+    margin-left:30px;
+    margin-right:11px;
+    padding-bottom:10px;
+    border-bottom:1px dashed #dcdcdc;
+}
+.baseSeniorSet{
+    position: absolute;
+    top:5px;
+    right:11px;
+    cursor: pointer;
+    color:#74b7e6;
+}
+.roteteArrow{
+    display: inline-block;
+    width:11px;
+    height:7px;
+    background:url("../img/iconAll.png") -716px -784px no-repeat;
+    vertical-align: middle;
+    color:#74b7e6;
+}
+.powerIcon1{
+    display: inline-block;
+    width:21px;
+    height:20px;
+    color:#fe896a;
+    font-size:16px;
+    margin-top:-5px;
+    vertical-align: middle;
+    background:url("../img/iconAll.png")-309px -617px no-repeat;
+}
+.awardSlidTips{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    background:url("../img/iconAll.png")-336px -698px no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.clear{
+    clear: both;
+}
+#activeExplain{
+    width:436px;
+    height:145px;
+    line-height:18px;
+    border:1px solid #e7e7e7;
+    padding:5px;
+    margin-left:-3px;
+    outline: none;
+}
+.title1{
+    vertical-align:138px;
+}
+
+/*=============派奖方式================*/
+#gameTypeSetting{
+    border:1px solid #e6e6e6;
+    margin-top:20px;
+    position: relative;
+}
+.commBg{
+    padding:10px;
+    margin:auto;
+    text-align:left;
+    line-height:20px;
+    color: #949494;
+    background-color:#f5f5f5;
+}
+.introduce{
+    position: absolute;
+    top:16px;
+    right:20px;
+    color: #74b7e6;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.newIntroduce{
+    position: absolute;
+    top:45px;
+    right:0;
+    width:84%;
+    z-index:99;
+    padding-top: 12px;
+    background:#fff;
+    border:1px solid #e6e6e6;
+    display:none;
+}
+.setGameTypeBox{
+    position: relative;
+    background:#f5f5f5;
+}
+.iconBox.checked{
+    background:#fff;
+    color: #000;
+}
+.iconBox{
+    width:100px;
+    height:100px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.iconBox .ng-binding{
+    text-align: center;
+    color: #585858;
+    margin-top:10px;
+}
+.iconBox .typeIcon{
+    width:44px;
+    height:44px;
+    background:url("../img/pjfs_new.png")no-repeat;
+    position: relative;
+    margin:20px auto 0;
+}
+.iconBox .drawIcon{
+    background-position:0 0;
+}
+.iconBox .sendIcon{
+    background-position:-212px 0;
+}
+.iconBox .rankIcon{
+    background-position:-364px 0;
+}
+.iconBox .regIcon{
+    background-position:-516px 0;
+}
+.iconBox.checked:after{
+    content: '';
+    width:20px;
+    height:20px;
+    position: absolute;
+    display: block;
+    left:60px;
+    top:52px;
+    background:url("../img/pjfs_new.png")no-repeat -727px -26px;
+}
+.getLimit{
+    padding-bottom:10px;
+    border-bottom:1px dashed #dcdcdc;
+    margin:20px 11px 10px 30px;
+}
+#drawSetBox{
+   padding:15px 0;
+    background-color:#fff;
+    line-height:20px;
+}
+#drawlimit{
+    width:52px;
+    height:44px;
+    line-height:44px;
+    padding-left:8px;
+    display: inline-block;
+    border:1px solid #e7e7e7;
+    outline: none;
+}
+.drawDesc{
+    display: inline-block;
+    margin-left:-4px;
+}
+#drawLimitErr{
+    display: none;
+}
+#drawInfoBox #drawTimes .settingLine{
+    margin-top:10px;
+    line-height:46px!important;
+    position: relative;
+}
+#drawInfoBox{
+    margin-top:-15px;
+}
+#drawTimesLimit{
+    width:52px;
+    height:44px;
+    line-height:44px;
+    border:1px solid #e7e7e7;
+    outline: none;
+    display: inline-block;
+    padding-left:8px;
+    margin-right:5px;
+}
+#awardTimesLimit{
+    width:52px;
+    height:44px;
+    line-height:44px;
+    border:1px solid #e7e7e7;
+    outline: none;
+    display: inline-block;
+    padding-left:8px;
+    margin-right:5px;
+}
+#drawInfoBox .settingLine{
+    margin-top: 10px;
+    line-height:46px;
+}
+.tipsColor{
+    color: #949494;
+}
+#winningRate{
+    width:52px;
+    height:44px;
+    border:1px solid #e7e7e7;
+    outline:none;
+    line-height: 44px;
+    padding-left: 8px;
+}
+#winningRateTip{
+    color: #999;
+    margin-left: 156px;
+}
+.underLineWay1{
+    border-bottom: 1px dashed #dcdcdc;
+    margin: 0 11px 0 30px;
+}
+.settingLine{
+    line-height: 44px;
+    margin-top:10px;
+    position: relative;
+}
+.tips{
+    position: absolute;
+    top:40px;
+    right:-77px;
+    padding:0 15px;
+    border:1px solid #dcdcdc;
+    background:#fff;
+    z-index:230;
+}
+.tips:before{
+    content: '';
+    display: block;
+    width:0;
+    height:0;
+    border-bottom:6px solid #fff;
+    border-right:6px solid transparent;
+    border-left:6px solid transparent;
+    top:-6px;
+    left:54px;
+    position: absolute;
+}
+.tips1{
+    top:40px;
+    right:4px;
+}
+
+
+

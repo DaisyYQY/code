@@ -34,8 +34,8 @@ $(function () {
             el: '.swiper-pagination',
             clickable :true,
         }
-
     })
+
     var a;
     $('.leftAsideTab').mouseenter(function () {
 
@@ -72,13 +72,51 @@ $(function () {
         $('.hdQrCode').hide();
     });
 
+    $('.leftUtil').click(function () {
+        $('.leftUtil').removeClass('active');
+        $(this).addClass('active');
+    });
 
 
+    $('.rightBox').on('click','.main-Btn', function () {
+        $('#manageFramePage').attr('src','create.html');
+    });
 
+    $('.mask').click(function () {
+        $('.mask').hide();
+        $('#project-modal').hide();
+    });
 
+    $('.rightBox').on('click','.main-Btn', function () {
+        $('.mask').hide();
+        $('#project-modal').hide();
+        $("#manageFramePage").attr("src",'create.html');
+    });
 
+    $(".leftImgCont").on("click",".startBtn" ,function () {
+        $(".leftImgCont").hide();
+        $('.gameiframe').attr({'src':'//hd.faisco.cn/7020498/XW6aET6Twaht9EOSX7_qHA/load.html?style=38&testPlayAid=17495346&testPlaySign=93d64669fabc658579315eae1219c84d'});
+        $('.gameframe').removeClass('hide');
+    });
 
+    $(".poupContent").on("click",".closeBtn" ,function () {
+        $('.gameframe').addClass('hide');
+        $(".leftImgCont").show();
+        $(".mask").hide();
+        $("#project-modal").hide();
+        $('.gameiframe').attr({'src':''});
+    });
 
+    $('.poupContent').on('click','.showqrCodeBtn',function () {
+        var a=$('.qrCodeText').html()
+        if(a=='扫码'){
+            $('.qrCodeText').html('收起');
+            $('.maskBg').show();
+        }else if(a=='收起'){
+            $('.qrCodeText').html('扫码');
+            $('.maskBg').hide();
+        }
+    });
 
 
 

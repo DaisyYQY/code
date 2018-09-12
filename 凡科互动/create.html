@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/create.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/create.js"></script>
+</head>
+<body>
+<div id="editActContainer">
+    <div class="containerTitle">
+        <div class="actListTitle">
+            <span class="icon"></span>
+            <a id="cancelButton" href="javascript:;">创建活动</a>/
+            <span class="ng-name">参与活动赢大奖</span>
+        </div>
+        <div class="titleBtnBox">
+            <div class="savePubButon">
+                <span class="icon"></span>
+                预览
+            </div>
+            <div class="saveButon">
+                <span class="icon"></span>
+                保存
+            </div>
+        </div>
+    </div>
+    <div class="editActive">
+        <div class="topBarWrap">
+            <div class="topBarSrollBox">
+                <div class="topBar">
+                    <div class="column checked"><span class="name">首页</span></div>
+                    <div class="column"><span class="name">游戏过程</span></div>
+                    <div class="column"><span class="name">活动奖品</span></div>
+                    <div class="column"><span class="name">我的奖品</span></div>
+                    <div class="column"><span class="name">奖品详情</span></div>
+                    <div class="column"><span class="name">挑战成功</span></div>
+                    <div class="column"><span class="name">挑战失败</span></div>
+                    <div class="column"><span class="name">摇奖页面</span></div>
+                    <div class="column"><span class="name">中奖页面</span></div>
+                    <div class="column"><span class="name">没中奖页</span></div>
+                    <div class="column"><span class="name">排行榜</span></div>
+                    <div class="column"><span class="name">分享效果</span></div>
+                    <div class="slideBar"><div id="topBardSlide"></div></div>
+                </div>
+                <div class="scrollIcon scrollLeft"></div>
+                <div class="scrollIcon scrollright"></div>
+            </div>
+        </div>
+        <div class="editContent">
+            <div class="editDetailBox">
+                <div class="phone">
+                    <div class="wxTitle">
+                        <div id="actName" class="actName ng-binding">参与活动赢大奖</div>
+                    </div>
+                    <div id="changeLeft" class="changeBtn">
+                        <div class="leftImg img"></div>
+                    </div>
+                    <div id="changeRight" class="changeBtn">
+                        <div class="RightImg img"></div>
+                    </div>
+                    <div id="gameContent">
+                        <iframe id="gamePreviewPage" src="//yx.hd.fkw.com/dqgryhl.jsp?_manage=d&aid=17495346&style=38&tplId=-1&gameType=0&id=15" frameborder="0" scrolling="auto" width="100%" height="100%"></iframe>
+                    </div>
+                </div>
+                <div class="phoneHolder hideImg"></div>
+                <div class="editDetail">
+                    <div id="activeTab">
+                        <div class="tabSetting checked">
+                            <span class="ng-binding">基础设置</span>
+                            <div class="awardErrDot"></div>
+                        </div>
+                        <div class="tabSetting">
+                            <span class="ng-binding">派奖方式</span>
+                            <div class="awardErrDot"></div>
+                        </div>
+                        <div class="tabSetting">
+                            <span class="ng-binding">奖项设置</span>
+                            <div class="awardErrDot"></div>
+                        </div>
+                        <div class="tabSetting">
+                            <span class="ng-binding">高级设置</span>
+                            <div class="awardErrDot"></div>
+                        </div>
+                    </div>
+                    <div id="baseSetting" class="hide">
+                        <p class="underLineWay">
+                            <span class="fontWeight">基本选项</span>
+                        </p>
+                        <div id="actNameSetting">
+                             <span class="leftTitle">
+                                  <span class="flag">*</span>
+                                  <span class="baseSettingTitle">活动标题：</span>
+                            </span>
+                            <input id="name" type="text" name="activeName" value="参与活动赢大奖">
+                        </div>
+                        <div class="inputError">输入不能为空且长度不超过30个字</div>
+                        <div id="setGameTimeBox">
+                            <span class="leftTitle">
+                                <span class="flag">*</span>
+                                <span class="baseSettingTitle">活动时间：</span>
+                            </span>
+                            <input id="beginTime" class="hasDatepicker" type="text" name="activeName" value="2018-09-09 16:05">至
+                            <input id="endTime" class="hasDatepicker" type="text" name="activeName" value="2018-09-16 16:05">
+                        </div>
+                        <div id="setLimitJoinNumBox">
+                            <div id="joinNumBox" class="baseLine1">
+                                <span class="leftTitle">
+                                    <span class="flag">&nbsp</span>
+                                    <span class="baseSettingTitle">参与人数：</span>
+                                </span>
+                                <input id="hideJoinNum" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label  for="hideJoinNum">隐藏</label>
+                                <input id="showJoinNum" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label class="checked" for="hideJoinNum">展示</label>
+                                <div class="commMg">
+                                    <span>增加虚拟参与人数 
+                                        <input type="text" id="virtualJoinNum" value="0">
+                                     人
+                                    </span>
+                                    <span class="explain">（只展示不计入统计）</span>
+                                </div>
+                            </div>
+                            <div class="baseLine1 joinNumLimit">
+                                <span class="leftTitle">
+                                    <span class="powerIcon">&nbsp</span>
+                                    <span class="baseSettingTitle">参与人数限制：</span>
+                                </span>
+                                <input id="noLimitNum" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label for="noLimitNum">不限</label>
+                                <input id="LimitNum" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label class="checked" for="LimitNum">限制</label>
+                                <span id="limitRegNumBox">
+                                    <input id="theLimitRegNum_new" type="text" value="100">  人参与
+                                    <br/>
+                                    <div class="errMsg hide">互动免费版最大参与人数限制为100人</div>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="attentionBefore">
+                            <div class="verTipsBox">
+                                <span class="leftTitle">
+                                    <span class="powerIcon"></span>
+                                    <span class="baseSettingTitle">强制关注：</span>
+                                </span>
+                                <input id="openFansOnly" class="openclose" disabled="disabled" type="radio" name="isShowJoinNum">
+                                <label for="openFansOnly">开启</label>
+                                <input id="closeFansOnly" class="openclose" type="radio" name="isShowJoinNum">
+                                <label class="checked" for="closeFansOnly">关闭</label>
+                                <a class="aTips" href="###">查看示例</a>
+                            </div>
+                            <div class="commMg">
+                               <span class="theInnerTxt">请先到个人中心开通强制关注功能</span>
+                                <a href="http://hd.fkw.com/news/5249" target="_blank" class="aTips">详细教程</a>
+                            </div>
+                        </div>
+                        <div class="seniorSetBox">
+                            <div class="seniorSetBoxOption">
+                                <span class="fontWeight">高级选项</span>
+                                <div class="baseSeniorSet">
+                                    <span class="ng-binding">更多设置</span>
+                                    <span class="roteteArrow"></span>
+                                </div>
+                            </div>
+                            <div class="seniorBoxInfo">
+                                <div id="accessKey">
+                                    <span class="leftTitle">
+                                        <span class="powerIcon">&nbsp</span>
+                                        <span class="baseSettingTitle">访问秘钥：</span>
+                                    </span>
+                                    <input id="closeAccessKey" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label class="checked" for="closeAccessKey">关闭</label>
+                                    <input id="oneAccessKey" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label for="oneAccessKey">一人一码</label>
+                                    <input id="publicAccessKey" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label for="publicAccessKey">通用码</label>
+                                </div>
+                                <div class="baseLine1">
+                                    <span class="leftTitle">
+                                        <span class="powerIcon">&nbsp</span>
+                                        <span class="baseSettingTitle">广告页：</span>
+                                    </span>
+                                    <input id="closeAdvertising" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label class="checked" for="closeAdvertising">隐藏</label>
+                                    <input id="openAdvertising" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label for="openAdvertising">展示</label>
+                                </div>
+                                <div class="baseLine1">
+                                    <span class="leftTitle">
+                                        <span class="powerIcon1">&nbsp</span>
+                                        <span class="baseSettingTitle">轮播获奖信息：</span>
+                                    </span>
+                                    <input id="openSlide" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label for="openSlide">开启</label>
+                                    <input id="hideSlide" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label class="checked" for="hideSlide">关闭</label>
+                                    <span class="awardSlidTips"></span>
+                                </div>
+                                <div id="areaLimitBox" class="baseLine1">
+                                    <span class="leftTitle">
+                                        <span class="powerIcon1">&nbsp</span>
+                                        <span class="baseSettingTitle">可参与地区：</span>
+                                    </span>
+                                    <input id="allArea" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label class="checked" for="allArea">全部</label>
+                                    <input id="someArea" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                    <label for="someArea">部分</label>
+                                    <span class="awardSlidTips"></span>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="baseLine1">
+                                    <span class="leftTitle title1">
+                                        <span class="baseSettingTitle">活动说明：</span>
+                                    </span>
+                                    <textarea id="activeExplain"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gameTypeSetting" class="settingbox">
+                        <p class="introduce">说明</p>
+                        <div class="newIntroduce">
+                            <div class="iconUp"></div>
+                            <p class="gameTypeDetail">
+                                <span class="theBlueColor">【抽奖派发】</span>
+                                <span class="ng-binding">顾客完成活动要求后就可获得抽奖机会，您可以按需设置中奖率和每人最多可中奖次数。</span>
+                            </p>
+                            <p class="gameTypeDetail">
+                                <span class="theBlueColor">【参与送券】</span>
+                                <span class="ng-binding">顾客完成活动可领取奖品，礼品随机派发，先到先得，每人只可领取一份，送完即止。注意：安慰奖仅在其他奖品派发完后才派发。</span>
+                            </p>
+                            <p class="gameTypeDetail">
+                                <span class="theBlueColor">【按排名派发】</span>
+                                <span class="ng-binding">活动结束后，商家按参与者最高成绩的排名高低进行奖品的派发。</span>
+                            </p>
+                            <p class="gameTypeDetail">
+                                <span class="theBlueColor">【报名后派发】</span>
+                                <span class="ng-binding">顾客完成活动要求后报名，活动结束后商家可在后台按照自己的规则派发奖品。</span>
+                            </p>
+                        </div>
+                        <div class="commBg">请选择活动派奖方式（活动发布后将无法修改）</div>
+                        <div class="setGameTypeBox">
+                            <div class="iconBox checked">
+                                <div class="drawIcon typeIcon"></div>
+                                <div class="ng-binding">抽奖派发</div>
+                            </div>
+                            <div class="iconBox">
+                                <div class="sendIcon typeIcon"></div>
+                                <div class="ng-binding">参与送券</div>
+                            </div>
+                            <div class="iconBox">
+                                <div class="rankIcon typeIcon"></div>
+                                <div class="ng-binding">按排名派发</div>
+                            </div>
+                            <div class="iconBox">
+                                <div class="regIcon typeIcon"></div>
+                                <div class="ng-binding">报名后派发</div>
+                            </div>
+                        </div>
+                        <p class="getLimit">
+                            <span class="fontWeight">抽奖限制</span>
+                        </p>
+                        <div id="drawSetBox">
+                            <span class="leftTitle">
+                                <span id="drawfont">抽奖</span>门槛：
+                            </span>
+                            游戏成绩达到
+                            <input id="drawlimit" class="onlyNum" type="text" value="10"> 秒，即为挑战成功可
+                            <span class="drawDesc">抽奖</span>
+                            <div id="drawLimitErr">输入不能为空！</div>
+                        </div>
+                        <div id="drawInfoBox">
+                            <div id="drawTimes">
+                                <div class="settingLine">
+                                    <span class="leftTitle">总抽奖机会：</span>
+                                    <input id="noLimitDrawTimes" class="openclose" type="radio">
+                                    <label class="checked" for="noLimitDrawTimes">不限</label>
+                                    <input id="LimitDrawTimes" class="openclose" type="radio">
+                                    <label for="LimitDrawTimes">限制</label>
+                                </div>
+                                <div class="settingLine">
+                                    <span class="leftTitle">每日抽奖机会：</span>每人每日有
+                                    <input id="drawTimesLimit" class="openclose" type="text" value="3">次抽奖机会
+                                </div>
+                            </div>
+                            <p class="getLimit">
+                                <span class="fontWeight">中奖率</span>
+                            </p>
+                            <div id="prizeTotalBox">
+                                <div class="settingLine">
+                                    <span class="leftTitle">抽奖模式：</span>每人最多可中奖
+                                    <input id="awardTimesLimit" type="text" value="3">次
+                                </div>
+                            </div>
+                            <div class="settingLine">
+                                <span class="leftTitle">每人中奖次数：</span>
+                                <input id="winByVisitor" class="openclose" type="radio">
+                                <label class="checked" for="winByVisitor">按人流量发放</label>
+                                <input id="winByTime" class="openclose" type="radio">
+                                <label for="winByTime">时间均匀发放</label>
+                                <span class="tipsColor">发布后不可切换选择</span>
+                            </div>
+                            <div class="settingLine">
+                                <div class="settingLine">
+                                    <span class="leftTitle">总中奖率：</span>每人最多可中奖
+                                    <input id="winningRate" type="text" value="10">%
+                                    <a id="simulationSum" class="aTips" href="">模拟计算</a>
+                                </div>
+                                <div id="winningRateTip">
+                                    这意味着每10次抽奖1次获奖
+                                    <a class="aTips" href="">了解更多</a>
+                                </div>
+                                <div class="settingLine">
+                                    <span class="leftTitle">奖品分期投放：</span>
+                                    <input id="cycleClose" class="openclose" type="radio">
+                                    <label class="cycleClose checked" for="winByVisitor">关闭</label>
+                                    <input id="cycle12" class="openclose" type="radio">
+                                    <label for="cycle12">12小时</label>
+                                    <input id="cycle24" class="openclose" type="radio">
+                                    <label for="cycle24">24小时</label>
+                                    <input id="cycle48" class="openclose" type="radio">
+                                    <label for="cycle48">48小时</label>
+                                </div>
+                            </div>
+                            <!--<div id="winbyTimeTip">-->
+                                <!--可避免奖品过快被抽完的情况，在活动时间内生效，适用于长期，人流量较大的活动，若活动人流量较小，可能会有奖品剩余-->
+                                <!--<a class="aTips" href="">了解更多</a>-->
+                            <!--</div>-->
+                            <p class="getLimit">
+                                <span class="fontWeight">高级选项</span>
+                            </p>
+                        </div>
+                        <div id="helpSettingBox" class="settingLine">
+                             <span class="leftTitle">
+                                 <span class="powerIcon">&nbsp</span>
+                                 <span class="baseSettingTitle">好友助力：</span>
+                             </span>
+                            <input id="closeHelpSetting" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                            <label class="checked" for="closeHelpSetting">关闭</label>
+                            <input id="openHelpShare" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                            <label for="openHelpShare">分享奖励</label>
+                            <input id="openHelpInvite" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                            <label for="openHelpInvite">邀请奖励</label>
+                            <span class="tipsColor">发布后不可切换选择</span>
+                        </div>
+                        <div class="settingLine">
+                             <span class="leftTitle">
+                                 <span class="powerIcon">&nbsp</span>
+                                 <span class="baseSettingTitle">联系信息：</span>
+                             </span>
+                        <input id="closeAwardLinkNoDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                        <label class="checked" for="closeAwardLinkNoDraw">关闭</label>
+                        <input id="beforeJoinLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                        <label for="beforeJoinLink">参与前填写</label>
+                        <input id="beforeDrawLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                        <label for="beforeDrawLink">抽奖前填写</label>
+                        <input id="afterAwardLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                        <label for="afterAwardLink">中奖后填写</label>
+                    </div>
+                        <div class="settingLine">
+                             <span class="leftTitle">
+                                 <span class="baseSettingTitle">快捷重复抽奖：</span>
+                             </span>
+                            <input id="closeRepeatDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                            <label for="closeRepeatDraw">关闭</label>
+                            <input id="openRepeatDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                            <label class="checked" for="openRepeatDraw">开启</label>
+                            <span class="awardSlidTips"></span>
+                            <p class="tips hide">开奖后，玩家抽奖后若不中奖可直接点击继续抽奖，无需继续参加游戏</p>
+                        </div>
+                        <div class="settingLine">
+                             <span class="leftTitle">
+                                 <span class="baseSettingTitle">奖品派完提示：</span>
+                             </span>
+                            <input id="closeNoAwardTips" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                            <label class="checked" for="closeNoAwardTips">提示未中奖</label>
+                            <input id="openNoAwardTips" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                            <label for="openNoAwardTips">提示已派完</label>
+                            <span class="awardSlidTips"></span>
+                            <p class="tips tips1 hide">奖品为零时，玩家抽奖会提醒奖品已经派完</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-mask"></div>
+</body>
+</html>

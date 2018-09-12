@@ -1,0 +1,591 @@
+html{
+    height:100%;
+}
+*::-webkit-scrollbar {/*滚动条整体样式*/
+    width:4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height:4px;
+}
+*::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius:5px;
+    -webkit-box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
+    background:rgba(0,0,0,0.2);
+}
+*::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius:0;
+    background:rgba(0,0,0,0.1);
+}
+body{
+    height:100%;
+    /*min-height:230px;*/
+}
+.hide{
+    display: none;
+}
+.containerBox{
+    height:100%;
+}
+#hdcontent{
+    overflow: auto;
+    height:100%;
+    box-sizing: border-box;
+}
+.swiper-mask{
+    width:2000px;
+    margin-left: -1000px;
+    position: absolute;
+    left:50%;
+    height:100%;
+    overflow: hidden;
+}
+#swiper2 .swiper-slide{
+    height:200px;
+    overflow: hidden;
+}
+.swiper-mask>img{
+    width:100%;
+    height:100%;
+    display: block;
+}
+.swiper-pagination-bullet{
+    width:12px!important;
+    height:12px!important;
+    margin:0 6.5px!important;
+    background:rgba(255,255,255,.5)!important;
+}
+.swiper-pagination-bullet-active{
+    background:rgb(255,255,255)!important;
+}
+.swiper-btn{
+    position: absolute;
+    z-index:10;
+    cursor: pointer;
+}
+.sBtn1{
+    left:1182px;
+    top:10px;
+}
+.sBtn1 .hover{
+    display: none;
+}
+.sBtn1:hover .static{
+    display: none;
+}
+.sBtn1:hover .hover{
+    display: block;
+}
+.sBtn2{
+    left:1228px;
+    top:108px;
+}
+.sBtn2 .hover{
+    display: none;
+}
+.sBtn2:hover .static{
+    display: none;
+}
+.sBtn2:hover .hover{
+    display: block;
+}
+/*=================下方数据===================*/
+#activeScrollBox{
+    overflow: hidden;
+}
+#activeTwo{
+    position: relative;
+    width:1362px;
+    background-color:#fff;
+    border:0;
+    z-index: 100;
+}
+.activityGroup{
+    position: relative;
+}
+.newCategoryItem{
+    width:100%;
+    height:50px;
+    text-align: center;
+    /*border-bottom:1px solid #e2e2e2;*/
+}
+.newCategoryItem .column{
+    display: inline-block;
+    padding:8px 16px;
+    color: #535353;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    line-height: 35px;
+}
+.newCategoryItem .column:hover{
+    color:#74b7e6;
+}
+.newCategoryItem .column.active{
+    color:#74b7e6;
+}
+.selectImg{
+    display: inline-block;
+    width:14px;
+    height:9px;
+    background:url("../img/iconAll2.png")no-repeat -724px -623px;
+    transition:all .3s;
+    margin-left: 4px;
+}
+
+.newCategoryBox3,.newCategoryBox4{
+    width:100%;
+    height:53px;
+    background:#fdfdfd;
+    /*overflow-y: hidden;*/
+    display:none;
+}
+/*.newCategoryBox3{*/
+    /*display: block;*/
+/*}*/
+
+.slideBox{
+    position: relative;
+    width:100%;
+    height:51px;
+    /*overflow-y: hidden;*/
+    text-align: center;
+    border-bottom:1px solid #e2e2e2;
+    border-top:1px solid #e2e2e2;
+}
+
+.slideBox>.column{
+    display: inline-block;
+    padding:8px 16px;
+    color: #535353;
+    line-height: 35px;
+}
+.slideBox>.column:hover{
+    color:#74b7e6;
+}
+.slideBox>.column.active{
+    color:#74b7e6;
+}
+.moreFestival{
+    display: none;
+    border:1px solid #ccc;
+    background-color:#fff;
+    width:100px;
+    height:207px;
+    position: absolute;
+    top:40px;
+    right:320px;
+    box-shadow:0 0 3px 1px rgba(0,0,0,.15);
+    overflow-x: hidden;
+    overflow-y:scroll;
+    padding:8px 3px;
+    z-index:99;
+}
+
+.moreFestival::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+.moreFestival::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.moreFestival::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+.moreFestival>.column{
+    width:100%;
+    padding:8px 3px;
+    text-align: center;
+    line-height: 16px;
+    float: none;
+}
+.moreFestival>.column.active{
+    background-color: rgb(245, 245, 245);
+}
+.moreFestival>.column:hover{
+    background-color: rgb(245, 245, 245);
+}
+.moreFestival>.column.active{
+    background-color: rgb(245, 245, 245);
+}
+.column{
+    user-select:none;
+}
+
+#activeBox2{
+    margin-top: 20px;
+    background:#f5f5f5;
+    color: #585858;
+    min-height: 200px;
+}
+.activeContent{
+    padding:16px 0 4px 40px;
+    width:1123px;
+    margin:0 auto;
+}
+.actPic .hover{
+    display: none;
+}
+.hdModel{
+    width:233px;
+    height:181px;
+    background:#fff;
+    border:1px solid #e7e7e7;
+    border-radius:6px;
+    padding:0 6px;
+    padding-top: 6px;
+    display:inline-block;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin-right: 14px;
+    margin-bottom: 24px;
+    vertical-align: middle;
+}
+.hdModel.active .actPic .static{
+    display:none;
+}
+.hdModel.active .actPic .hover{
+    display:block;
+}
+.hdModel.active .actImg{
+    background-position:-53px -8px;
+}
+
+.actPic{
+    width:225px;
+    height:125px;
+    overflow: hidden;
+    margin:4px;
+    position: relative;
+    margin-bottom: 0;
+}
+.actPic img{
+    height:100%;
+    width:100%;
+}
+.isHot{
+    width:56px;
+    height:43px;
+    background:url("../img/hot.png")no-repeat;
+    position: absolute;
+    top:0;
+    right:0;
+}
+.actDescript{
+    margin-left: 8px;
+    color: #333;
+    width:216px;
+    height:46px;
+    display: inline-block;
+    line-height: 46px;
+}
+.actName{
+    display: inline-block;
+    width:144px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.actImg{
+    width:38px;
+    height:38px;
+    line-height:28px;
+    float: right;
+    margin-top:6px;
+    margin-right:-9px;
+    background:url("../img/btn.png")-9px -8px no-repeat;
+}
+
+.gameAdviceBox{
+    padding:16px 0 4px 40px;
+    width:1123px;
+    margin:0 auto;
+}
+.gameBox{
+    padding:28px 49px 52px 0;
+    font-size:14px;
+    text-align: center;
+}
+.gameiframe html{
+    font-size: 17px!important;
+}
+.nomore{
+    color:#484848;
+}
+.advice{
+    color: #949494;
+}
+.ctrbtn{
+    color:#329fea;
+    cursor: pointer;
+}
+.divider{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.divider img{
+    display: inline-block;
+    margin:0 20px;
+}
+.divider:before{
+    content: '';
+    -webkit-box-flex:1;
+    flex-grow:1;
+    height:1px;
+    background:#dcdcdc;
+    display: inline-block;
+}
+.divider:after{
+    content: '';
+    -webkit-box-flex:1;
+    flex-grow:1;
+    height:1px;
+    background:#dcdcdc;
+    display: inline-block;
+}
+
+
+/*===================模态框======================*/
+#project-modal {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    width: 660px;
+    margin: 0 auto;
+    z-index: 1000;
+    /*transform: scale(0.5) translateY(-100%);*/
+    /*background-color: rgba(0,0,0,.5);*/
+}
+.fade {
+    transition: opacity .15s linear;
+}
+
+.mask{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.5);
+    transition:all .2s ease;
+    z-index: 202;
+}
+.poupContent{
+    background-color: #fff;
+    min-height: 160px;
+    /*width:660px;*/
+    box-sizing: border-box;
+    /*position: relative;*/
+}
+
+.showqrCodeBtn{
+    position: absolute;
+    top:-4px;
+    left:-34px;
+    width:37px;
+    height:85px;
+    cursor: pointer;
+    user-select: none;
+    background:url("../img/showQrcodeBtn.png")no-repeat -14px -14px;
+}
+.poupContent:after{
+    content:'';
+    display: block;
+    clear: both;
+    height:0;
+}
+.qrCodeIcon{
+    width:18px;
+    height:20px;
+    position: absolute;
+    top:13px;
+    left:10px;
+    background:url("../img/showQrcodeBtn.png")no-repeat -126px -14px;
+}
+.qrCodeText{
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    word-wrap:break-word;
+    letter-spacing:20px;
+    margin:0 auto;
+    margin-left:13px;
+    margin-top:36px;
+    right:50%;
+    top:50%;
+}
+.closeBtn{
+    position: absolute;
+    width:24px;
+    height:24px;
+    top:8px;
+    right:8px;
+    background:url("../img/iconAll.png")no-repeat -350px -907px;
+    cursor: pointer;
+    z-index: 300;
+}
+.leftBox{
+    float: left;
+    width:320px;
+    background-color:#e7e7e7;
+    height:518px;
+    /*overflow: hidden;*/
+    box-sizing: border-box;
+    padding:24px;
+    position: relative;
+}
+.leftImgCont{
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    background-color: #fff;
+    padding: 8px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.leftImgCont>img{
+    width:100%;
+    height:100%;
+}
+.startBtn{
+    position: absolute;
+    bottom:58px;
+    left:103px;
+    width:111px;
+    height:48px;
+    display: inline-block;
+    cursor: pointer;
+}
+.startBtn img{
+    width:100%;
+    height:100%;
+}
+.gameframe{
+    position: absolute;
+    overflow: hidden;
+    z-index:1000;
+    /*top:24px;*/
+}
+.gameiframe{
+    margin-left: -2px;
+    margin-top: -2px;
+}
+
+.rightBox{
+    float: left;
+    width:340px;
+    overflow: hidden;
+}
+.maskBg{
+    width:100%;
+    height:100%;
+    position: absolute;
+    bottom:23px;
+    top:0px;
+    left:0px;
+    right:23px;
+    background:rgba(0,0,0,.7);
+}
+.opacity{
+    opacity:0;
+}
+
+.rightBox{
+    padding:24px 32px;
+    width:340px;
+    float: left;
+    height:518px;
+    box-sizing: border-box;
+    position: relative;
+}
+.actName1{
+    margin-top: 80px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+.actExpTitle{
+    margin-top: 40px;
+    font-size: 14px;
+    color:#585858;
+    font-weight: 600;
+}
+.actExp_New{
+    margin-top: 6px;
+    font-size: 14px;
+    color: #585858;
+}
+.marketingTitle{
+    margin-top: 40px;
+    font-size: 14px;
+    color: #585858;
+    font-weight: 600;
+}
+.marketing{
+    margin-top:10px;
+}
+.marketItem{
+    display: inline-block;
+    background-color: #ededed;
+    padding: 2px 10px;
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    color: #585858;
+    text-align: center;
+    border-radius: 4px;
+}
+.main-Btn{
+    margin-top: 22px;
+    line-height: 44px;
+    background: #329fea;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.main-Btn:hover{
+    background: #1184d3;
+    color: #fff;
+}
+.showQrCodeBox{
+    width: 169px;
+    height: 197px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    margin-top: -96px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.qrCodeImg{
+    height: 158px;
+    box-sizing: border-box;
+    padding: 12px 12px 0 12px;
+}
+.qrCodeImg>img{
+    width:100%;
+    height:100%;
+}
+.qrCodeTxt{
+    width: 100%;
+    text-align: center;
+    color: #787878;
+    line-height: 37px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
