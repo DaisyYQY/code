@@ -1,0 +1,20 @@
+{
+  "name": "node.js-login-demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bootstrap": "latest",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.9",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "http-errors": "^1.6.3",
+    "jquery": "latest",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7"
+  }
+}

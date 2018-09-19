@@ -1,0 +1,71 @@
+body{
+    width:100%;
+    height:100%;
+    background:#0a4f96;
+}
+.container{
+    width:500px;
+    height:300px;
+    position: relative;
+    margin:0 auto;
+    top:50%;
+    margin-top:170px;
+    text-align: center;
+}
+.title{
+    color: #fff;
+    font-size:24px;
+    font-weight:bold;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+.container .put{
+    width:300px;
+    height:40px;
+    background:transparent;
+    outline: none;
+    border:1px solid #ffb000;
+    margin:10px 0;
+    text-indent:1em;
+}
+.forget,.login{
+    width:100px;
+    height:35px;
+    border:0;
+    outline: none;
+    margin-top:10px;
+}
+.forget{
+    background:#00aeef;
+    margin-right: 140px;
+}
+.login{
+    background:#00af69;
+    margin-left:50px;
+}
+.container .code{
+    width:250px;
+}
+.box{
+    text-align: left;
+    width:300px;
+    margin:0 auto;
+}
+
+.tips{
+    color: #f00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
