@@ -1,0 +1,399 @@
+#myActContainer{
+    padding:15px 28px 0;
+}
+#tableContent{
+    border:1px solid #e7e7e7;
+    background:#fff;
+    margin-bottom: 28px;
+}
+.hide{
+    display: none;
+}
+.myActContainTitle{
+    position: relative;
+    height: 56px;
+    padding-left: 16px;
+    line-height: 56px;
+    font-size: 16px;
+    border-bottom: solid 1px #e7e7e7;
+}
+#recycleBinTitle{
+    position: absolute;
+    height: 36px;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    font-size: 14px;
+    margin: auto;
+    cursor: pointer;
+    padding: 0 12px;
+    color: #fff;
+}
+.main-Button{
+    background: #329fea;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/iconAll.png) no-repeat;
+}
+#recycleBinTitle .icon{
+    background-position: -47px -908px;
+    width: 22px;
+    height: 22px;
+}
+#showActiveTable{
+    min-width: 880px;
+    display: block;
+}
+.faiTableWrap{
+    min-width: 10px;
+    border:none;
+    color: #787878;
+    background-color: #fff;
+}
+.center{
+    overflow-y: visible;
+    width: 100%;
+    text-align: center;
+}
+.bottom{
+    position: relative;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 0 16px;
+    line-height: 28px;
+    border-top: 0;
+}
+.faiTable{
+    width: 100%;
+    table-layout: auto;
+    border-bottom: 0;
+}
+.faiTable thead tr{
+    height: 48px;
+}
+.faiTable thead tr th{
+    position: relative;
+    line-height: 18px;
+    color: #585858;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    cursor: default;
+    vertical-align: middle;
+    height: 48px;
+    border-bottom: solid 1px #e7e7e7;
+    font-size: 14px;
+}
+.faiTable thead tr .column1{
+    box-sizing: border-box;
+    padding-left: 98px;
+    width: 255px;
+}
+.padding{
+    padding: 0 6px;
+}
+tbody tr{
+    cursor: default;
+    background: #fff;
+    height: 68px;
+    color: #787878;
+}
+tbody tr:nth-child(odd){
+    background-color: #fff;
+}
+tbody tr td{
+    height: 60px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    /*overflow: hidden;*/
+    border-bottom: solid 1px #e7e7e7;
+    line-height: 22px;
+    font-size: 14px;
+}
+.faiTableWrap .textCenter {
+    text-align: center;
+}
+.faiTableWrap .textLeft {
+    text-align: left;
+}
+.faiTableWrap .textRight {
+    position: relative;
+    text-align: right;
+}
+.moreOptionBox{
+    position: absolute;
+    top:-193px;
+    right:-5px;
+    z-index:10;
+    width:108px;
+    background:#fff;
+    padding:8px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border:1px solid #e7e7e7;
+    box-shadow:0 1px 5px rgba(0,0,0,.15);
+}
+.tipsBoxArrow{
+    width:8px;
+    height:8px;
+    background:#fff;
+    position: absolute;
+    border-style: solid;
+    border-width:0 1px 1px 0;
+    border-color: #e7e7e7;
+    top:181px;
+    left:56%;
+    transform:rotate(45deg);
+}
+.moreOptionBox a{
+    display: block;
+    width:100%;
+    height:28px;
+    line-height: 28px;
+    color: #787878;
+    padding:0 8px;
+    box-sizing: border-box;
+}
+.faiTableWrap .ellipsis{
+    word-wrap:break-word;
+    text-overflow: ellipsis;
+    white-space: inherit;
+    /*overflow: hidden;*/
+}
+tbody tr td .tdWrap {
+    width: auto;
+}
+.qrcodeIcon{
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    background: url(../img/iconAll.png) -884px -91px no-repeat;
+    margin-right: 14px;
+    margin-left: 10px;
+}
+.imgBox{
+    width: 80px;
+    height: 45px;
+    background: #e6e6e6;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 3px 0;
+}
+.imgBox img{
+    width:100%;
+}
+.textBox{
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: 1px;
+    vertical-align: middle;
+    width: 105px;
+    text-align: left;
+    max-height: 48px;
+    overflow: hidden;
+}
+.textBox a{
+    display: block;
+    color: #787878;
+}
+.textBox a:hover{
+    color: #329fea;
+    text-decoration: underline;
+}
+.textRight>a{
+    color: #329fea;
+    padding: 0 8px;
+    display: inline-block;
+}
+.textRight a:hover{
+    text-decoration: underline;
+}
+.textRight a .icon{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: url(../img/iconAll.png) no-repeat -318px -780px;
+}
+.column6 .padding .icon{
+    background-position: -332px -695px;
+}
+.column4 .padding .icon{
+    margin: -2px 0 0 2px;
+    background-position: -722px -622px;
+    width: 16px!important;
+    height: 10px!important;
+}
+tbody tr:hover{
+    background: #f5f5f5;
+}
+.total{
+    position: absolute;
+    top:16px;
+    height:28px;
+    z-index:1;
+    margin:0;
+}
+.pageBox{
+    position: absolute;
+    top:16px;
+    right:16px;
+    height:28px;
+    margin:0;
+}
+.dropDownBox{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    width:55px;
+    line-height:28px;
+    background:#fff;
+    text-align: center;
+    margin-left:4px;
+}
+.dropDownArea{
+    position: relative;
+    padding-left:8px;
+    width:100%;
+    height:28px;
+    line-height: 26px;
+    border:1px solid #e7e7e7;
+    cursor: pointer;
+    text-align: left;
+    box-sizing: border-box;
+}
+.dropDownArea:after{
+    content:'';
+    position: absolute;
+    display: inline-block;
+    width:12px;
+    height:8px;
+    background:url("../img/iconAll.png")-318px -782px no-repeat;
+    top:10px;
+    bottom:0;
+    right:5px;
+    margin:0;
+}
+.page{
+    position: static;
+    display: inline-block;
+    width:auto;
+    margin-right:8px;
+    margin-top:0;
+}
+.page a{
+    display: inline-block;
+    width:22px;
+    height:22px;
+    background:url("../img/iconAll.png")no-repeat -98px -775px;
+    vertical-align: middle;
+    outline: none;
+    margin-top:-3px;
+    text-decoration: underline;
+    cursor:default;
+}
+.page .disabledBtn{
+    background-position:-54px -775px;
+}
+.page .nextPage{
+    background-position:-230px -775px;
+}
+.page .prevPage:hover{
+    background-position:-55px -775px;
+}
+.page .nextPage:hover{
+    background-position:-186px -775px;
+}
+.jumpInput{
+    width:60px;
+    height:30px;
+    box-sizing: border-box;
+    border:1px solid #e7e7e7;
+    letter-spacing:1px;
+    padding-left:8px;
+}
+.jumpSubmit{
+    width:48px;
+    height:28px;
+    text-align: center;
+    border:1px solid #e7e7e7;
+    background:#fff;
+    display: inline-block;
+    margin-left:9px;
+    cursor: pointer;
+}
+.jumpSubmit:hover{
+    color: #fff;
+    background:#329fea;
+    border:1px solid #329fea;
+    transition:all .5s ease;
+}
+.faiTable_poupBox{
+    position: absolute;
+    top:49px;
+    left:-5px;
+    z-index:5;
+    text-align: center;
+    background:#fff;
+    overflow: hidden;
+    width:120px;
+    box-shadow:0 1px 2px rgba(0,0,0,.15);
+    font-weight: normal;
+    line-height: 30px;
+}
+.options:hover{
+    background:#f5f5f5;
+}
+.sep{
+    user-select:none;
+}
+
+.dropDownBox .optionsBox{
+    position: absolute;
+    top: -120px;
+    left: 0px;
+    z-index: 5;
+    text-align: center;
+    background: #fff;
+    overflow-y: auto;
+    width: 100%;
+    box-shadow:0 1px 2px rgba(0,0,0,.15);
+    /*font-weight: normal;*/
+    /*line-height: 30px;*/
+    max-height:315px;
+}
+.dropDownBox .optionsBox .options{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

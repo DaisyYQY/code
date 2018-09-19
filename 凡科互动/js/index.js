@@ -72,14 +72,12 @@ $(function () {
         $('.hdQrCode').hide();
     });
 
+    var arr=['newActive.html','myActive.html','cavIndex.html','myInfo.html','giftCenter.html','employee.html','staffLog.html','payService.html'];
     $('.leftUtil').click(function () {
         $('.leftUtil').removeClass('active');
         $(this).addClass('active');
-    });
-
-
-    $('.rightBox').on('click','.main-Btn', function () {
-        $('#manageFramePage').attr('src','create.html');
+        var num0=$(this).index();
+        $('#manageFramePage').attr({'src':arr[num0]});
     });
 
     $('.mask').click(function () {
@@ -87,19 +85,31 @@ $(function () {
         $('#project-modal').hide();
     });
 
-    $('.rightBox').on('click','.main-Btn', function () {
+    $('#project-modal').on('click','.main-Btn', function () {
         $('.mask').hide();
         $('#project-modal').hide();
         $("#manageFramePage").attr("src",'create.html');
     });
 
-    $(".leftImgCont").on("click",".startBtn" ,function () {
-        $(".leftImgCont").hide();
-        $('.gameiframe').attr({'src':'//hd.faisco.cn/7020498/XW6aET6Twaht9EOSX7_qHA/load.html?style=38&testPlayAid=17495346&testPlaySign=93d64669fabc658579315eae1219c84d'});
-        $('.gameframe').removeClass('hide');
+    $("#project-modal").on("click",".startBtn" ,function () {
+        var num=$(this).parent().parent().parent().attr("name");
+        console.log(num);
+        $.get("json/data1.json",function (data) {
+            $.each(data,function (i) {
+                console.log(num);
+                var oList21 = data[i];
+                var oId=oList21.id;
+                if(oId==num){
+                    $(".leftImgCont").hide();
+                    $('.gameiframe').attr({'src':oList21.iframeSrc});
+                    $('.gameframe').removeClass('hide');
+                }
+            })
+        })
+
     });
 
-    $(".poupContent").on("click",".closeBtn" ,function () {
+    $("#project-modal").on("click",".closeBtn" ,function () {
         $('.gameframe').addClass('hide');
         $(".leftImgCont").show();
         $(".mask").hide();
@@ -107,7 +117,7 @@ $(function () {
         $('.gameiframe').attr({'src':''});
     });
 
-    $('.poupContent').on('click','.showqrCodeBtn',function () {
+    $('#project-modal').on('click','.showqrCodeBtn',function () {
         var a=$('.qrCodeText').html()
         if(a=='扫码'){
             $('.qrCodeText').html('收起');

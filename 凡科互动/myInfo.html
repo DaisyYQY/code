@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/myInfo.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/myInfo.js"></script>
+</head>
+<body>
+<div id="myInfoContainer" class="container">
+    <div class="myInfoBox">
+        <div class="compInfoBox">
+            <div class="wxgzhInfoBox inlineBlock">
+                <div class="acctInfo  main-whiteBox">
+                    <div class="columnTitle acctInfoTitle">企业信息</div>
+                    <div class="acctInfoLine acctInfoSubTitle">帐号</div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">企业帐号：</span>
+                        ug16748840
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">帐号版本：</span>
+                        <span class="powerIcon ver_free"></span>
+                        互动免费版
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">到期时间：</span>
+                        无
+                        <a class="update" href="javascript:;">立即升级</a>
+                        <a class="update" href="javascript:;">了解更多</a>
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">绑定微信：</span>
+                        <span class="bindWx">
+                            <a href="javascript:;">马上绑定</a>
+                        </span>
+                    </div>
+                    <div class="acctInfoLine acctInfoSubTitle hostUnit">
+                        主办单位
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">名称：</span>
+                        <span class="userInfo_Hn">-</span>
+                        <a id="editHostName" class="update" href="javascript:;">编辑</a>
+                    </div>
+                    <div class="acctInfoLine acctInfoSubTitle hostUnit">
+                        红包
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">红包余额：</span>
+                        <span class="balance">0.00元</span>
+                        <a id="topupBtn"  class="update" href="javascript:;">立即充值</a>
+                        <a id="balanceAccountBtn" class="update" href="javascript:;">余额流水</a>
+                        <a id="drawalBtn" class="update" href="javascript:;">提现</a>
+                        <a id="drawalRecordBtn" class="update" href="javascript:;">提现记录</a>
+                        <a class="update" href="avascript:;">了解更多</a>
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">防刷短信模板：</span>
+                        <span class="selectedModel">尚未选择</span>
+                        <a id="selectTpl" class="selectTpl update" href="javascript:;">选择模板</a>
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">短信剩余数量：</span>
+                        <span class="remainQuantity">0</span>条
+                        <a id="bugMsg" class="bugMsg update" href="javascript:;">购买短信包</a>
+                    </div>
+                    <div class="acctInfoLine acctInfoSubTitle hostUnit">
+                        短信验证
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">联系电话短信模板：</span>
+                        <span class="selectedModel">尚未选择</span>
+                        <a id="selectTpl2" class="update" href="javascript:;">选择模板</a>
+                    </div>
+                    <div class="acctInfoLine">
+                        <span class="titleName">短信剩余数量：</span>
+                        <span class="remainQuantity">0</span>条
+                        <a id="buyContractMsg" class="update" href="javascript:;">购买短信包</a>
+                    </div>
+                </div>
+                <div class="wxgzhContent main-whiteBox">
+                    <div class="columnTitle1">微信公众号授权</div>
+                    <div class="compLink margin-21 authorizedStatu">
+                        <div id="unAuthorizedBox" class="columnTitle samllColumnTitle">
+                            公众号授权状态：尚未授权
+                        </div>
+                        <span class="myInfo_tips">授权后根据不同公众号类型可开启以下微信应用功能</span>
+                        <a class="myInfo_link" href="javascript:;">详情</a>
+                        <a class="authBtn" href="javascript:;"></a>
+                    </div>
+                </div>
+                <div class="wxApplication">
+                    <div class="columnTitle samllColumnTitle">微信应用功能</div>
+                    <div class="appBox">
+                        <div class="appItem">
+                            <div class="wxlogo mp1"></div>
+                            <div class="appDisc">
+                                <a href="javascript:;">开通微信授权功能</a>
+                            </div>
+                            <div class="appNead">需已认证服务号</div>
+                            <div id="appOpen" class="appBtn">立即开通</div>
+                        </div>
+                        <div class="appItem">
+                            <div class="wxlogo mp2"></div>
+                            <div class="appDisc">
+                                <a href="javascript:;">开通微信卡券功能</a>
+                            </div>
+                            <div class="appNead">需已认证服务号</div>
+                            <div id="kqOpen" class="appBtn">立即开通</div>
+                        </div>
+                        <div class="appItem">
+                            <div class="wxlogo mp3"></div>
+                            <div class="appDisc">
+                                <a href="javascript:;">开通强制关注功能</a>
+                            </div>
+                            <div class="appNead">支持所有公众号</div>
+                            <div id="kqFans" class="appBtn">立即开通</div>
+                        </div>
+                        <div class="appItem">
+                            <div class="wxlogo mp4"></div>
+                            <div class="appDisc">
+                                <a href="javascript:;">开通公众号核销功能</a>
+                            </div>
+                            <div class="appNead">支持所有公众号</div>
+                            <div id="wxCash" class="appBtn">立即开通</div>
+                        </div>
+                        <div class="appItem">
+                            <div class="wxlogo mp5"></div>
+                            <div class="appDisc">
+                                <a href="javascript:;">开通公众号支付功能</a>
+                                <a href="">修改配置</a>
+                            </div>
+                            <div class="appNead">需已认证服务号</div>
+                            <div id="payOpen" class="appBtn">立即开通</div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

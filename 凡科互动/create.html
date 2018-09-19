@@ -48,6 +48,16 @@
                 <div class="scrollIcon scrollLeft"></div>
                 <div class="scrollIcon scrollright"></div>
             </div>
+            <div class="titleBtnBox titleBtnBox1 hide">
+                <div class="savePubButon">
+                    <span class="icon"></span>
+                    预览
+                </div>
+                <div class="saveButon">
+                    <span class="icon"></span>
+                    保存
+                </div>
+            </div>
         </div>
         <div class="editContent">
             <div class="editDetailBox">
@@ -85,7 +95,7 @@
                             <div class="awardErrDot"></div>
                         </div>
                     </div>
-                    <div id="baseSetting" class="hide">
+                    <div id="baseSetting" class="settingbox">
                         <p class="underLineWay">
                             <span class="fontWeight">基本选项</span>
                         </p>
@@ -160,11 +170,11 @@
                             <div class="seniorSetBoxOption">
                                 <span class="fontWeight">高级选项</span>
                                 <div class="baseSeniorSet">
-                                    <span class="ng-binding">更多设置</span>
+                                    <span class="ng-binding bind1">更多设置</span>
                                     <span class="roteteArrow"></span>
                                 </div>
                             </div>
-                            <div class="seniorBoxInfo">
+                            <div class="seniorBoxInfo box1 hide">
                                 <div id="accessKey">
                                     <span class="leftTitle">
                                         <span class="powerIcon">&nbsp</span>
@@ -219,7 +229,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="gameTypeSetting" class="settingbox">
+                    <div id="gameTypeSetting" class="settingbox hide">
                         <p class="introduce">说明</p>
                         <div class="newIntroduce">
                             <div class="iconUp"></div>
@@ -259,131 +269,1170 @@
                                 <div class="ng-binding">报名后派发</div>
                             </div>
                         </div>
-                        <p class="getLimit">
-                            <span class="fontWeight">抽奖限制</span>
-                        </p>
-                        <div id="drawSetBox">
+                        <div class="activeBox">
+                            <p class="getLimit">
+                                <span class="fontWeight">抽奖限制</span>
+                            </p>
+                            <div id="drawSetBox">
                             <span class="leftTitle">
                                 <span id="drawfont">抽奖</span>门槛：
                             </span>
-                            游戏成绩达到
-                            <input id="drawlimit" class="onlyNum" type="text" value="10"> 秒，即为挑战成功可
-                            <span class="drawDesc">抽奖</span>
-                            <div id="drawLimitErr">输入不能为空！</div>
-                        </div>
-                        <div id="drawInfoBox">
-                            <div id="drawTimes">
-                                <div class="settingLine">
-                                    <span class="leftTitle">总抽奖机会：</span>
-                                    <input id="noLimitDrawTimes" class="openclose" type="radio">
-                                    <label class="checked" for="noLimitDrawTimes">不限</label>
-                                    <input id="LimitDrawTimes" class="openclose" type="radio">
-                                    <label for="LimitDrawTimes">限制</label>
-                                </div>
-                                <div class="settingLine">
-                                    <span class="leftTitle">每日抽奖机会：</span>每人每日有
-                                    <input id="drawTimesLimit" class="openclose" type="text" value="3">次抽奖机会
-                                </div>
+                                游戏成绩达到
+                                <input id="drawlimit" class="onlyNum" type="text" value="10"> 秒，即为挑战成功可
+                                <span class="drawDesc">抽奖</span>
+                                <div id="drawLimitErr">输入不能为空！</div>
                             </div>
-                            <p class="getLimit">
-                                <span class="fontWeight">中奖率</span>
-                            </p>
-                            <div id="prizeTotalBox">
-                                <div class="settingLine">
-                                    <span class="leftTitle">抽奖模式：</span>每人最多可中奖
-                                    <input id="awardTimesLimit" type="text" value="3">次
+                            <div id="drawInfoBox">
+                                <div id="drawTimes">
+                                    <div class="settingLine">
+                                        <span class="leftTitle">总抽奖机会：</span>
+                                        <input id="noLimitDrawTimes" class="openclose" type="radio">
+                                        <label class="checked" for="noLimitDrawTimes">不限</label>
+                                        <input id="LimitDrawTimes" class="openclose" type="radio">
+                                        <label for="LimitDrawTimes">限制</label>
+                                    </div>
+                                    <div class="settingLine">
+                                        <span class="leftTitle">每日抽奖机会：</span>每人每日有
+                                        <input id="drawTimesLimit" class="openclose" type="text" value="3">次抽奖机会
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="settingLine">
-                                <span class="leftTitle">每人中奖次数：</span>
-                                <input id="winByVisitor" class="openclose" type="radio">
-                                <label class="checked" for="winByVisitor">按人流量发放</label>
-                                <input id="winByTime" class="openclose" type="radio">
-                                <label for="winByTime">时间均匀发放</label>
-                                <span class="tipsColor">发布后不可切换选择</span>
-                            </div>
-                            <div class="settingLine">
-                                <div class="settingLine">
-                                    <span class="leftTitle">总中奖率：</span>每人最多可中奖
-                                    <input id="winningRate" type="text" value="10">%
-                                    <a id="simulationSum" class="aTips" href="">模拟计算</a>
-                                </div>
-                                <div id="winningRateTip">
-                                    这意味着每10次抽奖1次获奖
-                                    <a class="aTips" href="">了解更多</a>
+                                <p class="getLimit">
+                                    <span class="fontWeight">中奖率</span>
+                                </p>
+                                <div id="prizeTotalBox">
+                                    <div class="settingLine">
+                                        <span class="leftTitle">抽奖模式：</span>每人最多可中奖
+                                        <input id="awardTimesLimit" type="text" value="3">次
+                                    </div>
                                 </div>
                                 <div class="settingLine">
-                                    <span class="leftTitle">奖品分期投放：</span>
-                                    <input id="cycleClose" class="openclose" type="radio">
-                                    <label class="cycleClose checked" for="winByVisitor">关闭</label>
-                                    <input id="cycle12" class="openclose" type="radio">
-                                    <label for="cycle12">12小时</label>
-                                    <input id="cycle24" class="openclose" type="radio">
-                                    <label for="cycle24">24小时</label>
-                                    <input id="cycle48" class="openclose" type="radio">
-                                    <label for="cycle48">48小时</label>
+                                    <span class="leftTitle">每人中奖次数：</span>
+                                    <input id="winByVisitor" class="openclose" type="radio">
+                                    <label class="checked" for="winByVisitor">按人流量发放</label>
+                                    <input id="winByTime" class="openclose" type="radio">
+                                    <label for="winByTime">时间均匀发放</label>
+                                    <span class="tipsColor">发布后不可切换选择</span>
                                 </div>
-                            </div>
-                            <!--<div id="winbyTimeTip">-->
+                                <div class="settingLine">
+                                    <div class="settingLine">
+                                        <span class="leftTitle">总中奖率：</span>每人最多可中奖
+                                        <input id="winningRate" type="text" value="10">%
+                                        <a id="simulationSum" class="aTips" href="">模拟计算</a>
+                                    </div>
+                                    <div id="winningRateTip">
+                                        这意味着每10次抽奖1次获奖
+                                        <a class="aTips" href="">了解更多</a>
+                                    </div>
+                                    <div class="settingLine">
+                                        <span class="leftTitle">奖品分期投放：</span>
+                                        <input id="cycleClose" class="openclose" type="radio">
+                                        <label class="cycleClose checked" for="winByVisitor">关闭</label>
+                                        <input id="cycle12" class="openclose" type="radio">
+                                        <label for="cycle12">12小时</label>
+                                        <input id="cycle24" class="openclose" type="radio">
+                                        <label for="cycle24">24小时</label>
+                                        <input id="cycle48" class="openclose" type="radio">
+                                        <label for="cycle48">48小时</label>
+                                    </div>
+                                </div>
+                                <!--<div id="winbyTimeTip">-->
                                 <!--可避免奖品过快被抽完的情况，在活动时间内生效，适用于长期，人流量较大的活动，若活动人流量较小，可能会有奖品剩余-->
                                 <!--<a class="aTips" href="">了解更多</a>-->
-                            <!--</div>-->
-                            <p class="getLimit">
-                                <span class="fontWeight">高级选项</span>
-                            </p>
-                        </div>
-                        <div id="helpSettingBox" class="settingLine">
+                                <!--</div>-->
+                                <p class="getLimit">
+                                    <span class="fontWeight">高级选项</span>
+                                </p>
+                            </div>
+                            <div id="helpSettingBox" class="settingLine">
                              <span class="leftTitle">
                                  <span class="powerIcon">&nbsp</span>
                                  <span class="baseSettingTitle">好友助力：</span>
                              </span>
-                            <input id="closeHelpSetting" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                            <label class="checked" for="closeHelpSetting">关闭</label>
-                            <input id="openHelpShare" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                            <label for="openHelpShare">分享奖励</label>
-                            <input id="openHelpInvite" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                            <label for="openHelpInvite">邀请奖励</label>
-                            <span class="tipsColor">发布后不可切换选择</span>
-                        </div>
-                        <div class="settingLine">
+                                <input id="closeHelpSetting" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label class="checked" for="closeHelpSetting">关闭</label>
+                                <input id="openHelpShare" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label for="openHelpShare">分享奖励</label>
+                                <input id="openHelpInvite" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label for="openHelpInvite">邀请奖励</label>
+                                <span class="tipsColor">发布后不可切换选择</span>
+                            </div>
+                            <div class="settingLine">
                              <span class="leftTitle">
                                  <span class="powerIcon">&nbsp</span>
                                  <span class="baseSettingTitle">联系信息：</span>
                              </span>
-                        <input id="closeAwardLinkNoDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                        <label class="checked" for="closeAwardLinkNoDraw">关闭</label>
-                        <input id="beforeJoinLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                        <label for="beforeJoinLink">参与前填写</label>
-                        <input id="beforeDrawLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                        <label for="beforeDrawLink">抽奖前填写</label>
-                        <input id="afterAwardLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                        <label for="afterAwardLink">中奖后填写</label>
-                    </div>
-                        <div class="settingLine">
+                                <input id="closeAwardLinkNoDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label class="checked" for="closeAwardLinkNoDraw">关闭</label>
+                                <input id="beforeJoinLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label for="beforeJoinLink">参与前填写</label>
+                                <input id="beforeDrawLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label for="beforeDrawLink">抽奖前填写</label>
+                                <input id="afterAwardLink" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label for="afterAwardLink">中奖后填写</label>
+                            </div>
+                            <div class="settingLine">
                              <span class="leftTitle">
                                  <span class="baseSettingTitle">快捷重复抽奖：</span>
                              </span>
-                            <input id="closeRepeatDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                            <label for="closeRepeatDraw">关闭</label>
-                            <input id="openRepeatDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                            <label class="checked" for="openRepeatDraw">开启</label>
-                            <span class="awardSlidTips"></span>
-                            <p class="tips hide">开奖后，玩家抽奖后若不中奖可直接点击继续抽奖，无需继续参加游戏</p>
-                        </div>
-                        <div class="settingLine">
+                                <input id="closeRepeatDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label for="closeRepeatDraw">关闭</label>
+                                <input id="openRepeatDraw" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label class="checked" for="openRepeatDraw">开启</label>
+                                <span class="awardSlidTips"></span>
+                                <p class="tips hide">开奖后，玩家抽奖后若不中奖可直接点击继续抽奖，无需继续参加游戏</p>
+                            </div>
+                            <div class="settingLine">
                              <span class="leftTitle">
                                  <span class="baseSettingTitle">奖品派完提示：</span>
                              </span>
-                            <input id="closeNoAwardTips" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                            <label class="checked" for="closeNoAwardTips">提示未中奖</label>
-                            <input id="openNoAwardTips" class="ng-prisyine" type="radio" name="isShowJoinNum">
-                            <label for="openNoAwardTips">提示已派完</label>
-                            <span class="awardSlidTips"></span>
-                            <p class="tips tips1 hide">奖品为零时，玩家抽奖会提醒奖品已经派完</p>
+                                <input id="closeNoAwardTips" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label class="checked" for="closeNoAwardTips">提示未中奖</label>
+                                <input id="openNoAwardTips" class="ng-prisyine" type="radio" name="isShowJoinNum">
+                                <label for="openNoAwardTips">提示已派完</label>
+                                <span class="awardSlidTips"></span>
+                                <p class="tips tips1 hide">奖品为零时，玩家抽奖会提醒奖品已经派完</p>
 
+                            </div>
+                        </div>
+                        <div class="activeBox hide">
+                            <div id="drawSetBox" class="subTabsettingBox">
+                                <div id="drawConditionBox" class="ng-binding">
+                                    <span class="leftTitle">领取门槛：</span>
+                                    游戏成绩达到 <input id="drawLimit" class="onlyNum ng-pristine ng-untouched ng-valid" type="text" value="10"> 秒，即为挑战成功可领取礼品
+                                    <div id="drawLimitErr" class="commMg inputErrTips">输入不能为空！</div>
+                                </div>
+                                <div id="openAwardLinkNoDrawBox">
+                                    <div class="verTipsBox settingLine">
+                                    <span class="leftTitle ng-binding">
+                                        <span class="powerIcon1"></span>
+                                        联系信息：
+                                    </span>
+                                    <span class="ng-scope">
+                                        <input id="closeAwardLinkNoDraw" class="hide" type="text">
+                                        <label class="checked" for="closeAwardLinkNoDraw">关闭</label>
+                                        <input id="beforeJoinLink" class="hide" type="text">
+                                        <label for="beforeJoinLink">参与前填写</label>
+                                        <input id="beforeDrawLink" class="hide" type="text">
+                                        <label for="beforeDrawLink">抽奖前填写</label>
+                                        <input id="afterAwardLink" class="hide" type="text">
+                                        <label for="afterAwardLink">中奖后填写</label>
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activeBox hide">
+                            <div id="drawSetBox" class="subTabsettingBox">
+                                <div id="openAwardLinkNoDrawBox">
+                                    <div class="verTipsBox settingLine">
+                                    <span class="leftTitle ng-binding">
+                                        总参与机会：
+                                    </span>
+                                    <span class="ng-scope">
+                                        <input id="closeAwardLinkNoDraw" class="hide" type="text">
+                                        <label class="checked" for="closeAwardLinkNoDraw">不限</label>
+                                        <input id="beforeJoinLink" class="hide" type="text">
+                                        <label for="beforeDrawLink">限制</label>
+                                    </span>
+                                    </div>
+                                </div>
+                                <div id="drawConditionBox" class="ng-binding">
+                                    <span class="leftTitle">每日参与机会：</span>
+                                    每人每日有<input id="drawLimit" class="onlyNum ng-pristine ng-untouched ng-valid" type="text" value="5"> 次参与机会
+                                    <div id="drawLimitErr" class="commMg inputErrTips">最少1次最多10次 </div>
+                                </div>
+                                <div id="openAwardLinkNoDrawBox">
+                                    <div class="verTipsBox settingLine">
+                                    <span class="leftTitle ng-binding">
+                                        <span class="powerIcon1"></span>
+                                        好友助力：
+                                    </span>
+                                    <span class="ng-scope">
+                                        <input id="closeAwardLinkNoDraw" class="hide" type="text">
+                                        <label class="checked" for="closeAwardLinkNoDraw">关闭</label>
+                                        <input id="beforeJoinLink" class="hide" type="text">
+                                        <label for="beforeDrawLink">分享奖励</label>
+                                        <input id="afterAwardLink" class="hide" type="text">
+                                        <label for="afterAwardLink">邀请奖励</label>
+                                        <span class="tipsColor">发布后不可切换选择</span>
+                                    </span>
+                                    </div>
+                                </div>
+                                <div id="openAwardLinkNoDrawBox">
+                                    <div class="verTipsBox settingLine">
+                                    <span class="leftTitle ng-binding">
+                                        <span class="powerIcon1"></span>
+                                        联系信息：
+                                    </span>
+                                    <span class="ng-scope">
+                                        <input id="closeAwardLinkNoDraw" class="hide" type="text">
+                                        <label class="checked" for="closeAwardLinkNoDraw">关闭</label>
+                                        <input id="beforeJoinLink" class="hide" type="text">
+                                        <label for="beforeDrawLink">参与前填写</label>
+                                        <input id="afterAwardLink" class="hide" type="text">
+                                        <label for="afterAwardLink">参与后填写</label>
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activeBox hide">
+                            <div id="drawSetBox" class="subTabsettingBox">
+                                <div id="drawConditionBox" class="ng-binding">
+                                    <span class="leftTitle">报名门槛：</span>
+                                    游戏成绩达到 <input id="drawLimit" class="onlyNum ng-pristine ng-untouched ng-valid" type="text" value="10"> 秒，即为挑战成功可领取礼品
+                                    <div id="drawLimitErr" class="commMg inputErrTips">输入不能为空！</div>
+                                </div>
+                                <div id="openAwardLinkNoDrawBox">
+                                    <div class="verTipsBox settingLine">
+                                    <span class="leftTitle ng-binding">
+                                        <span class="powerIcon1"></span>
+                                        联系信息：
+                                    </span>
+                                    <span class="ng-scope">
+                                        <input id="closeAwardLinkNoDraw" class="hide" type="text">
+                                        <label class="checked" for="closeAwardLinkNoDraw">关闭</label>
+                                        <input id="beforeJoinLink" class="hide" type="text">
+                                        <label for="beforeJoinLink">参与前填写</label>
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div id="awardsSetting" class="settingbox hide">
+                        <div id="awardBox">
+                            <div id="awardBoxTitle" class="">
+                                <div class="awardNums">
+                                    <span class="topAwardExplain">请设置活动需要派发的奖项</span>
+                                    <div>
+                                        <input id="comfortSetting" type="checkbox">
+                                        <label class="comfortSet" for="comfortSetting">设置安慰奖</label>
+                                    </div>
+                                </div>
+                                <div class="awardLevelBox">
+                                    <div class="awardLevelItem selected">
+                                        <span class="awardItemName">奖项一</span>
+                                        <div class="awardErrDot"></div>
+                                    </div>
+                                    <div class="awardLevelItem">
+                                        <span class="awardItemName">奖项二</span>
+                                        <div class="awardErrDot"></div>
+                                    </div>
+                                    <div class="awardLevelItem">
+                                        <span class="awardItemName">奖项三</span>
+                                        <div class="awardErrDot"></div>
+                                    </div>
+                                    <span class="awardNumOptBox">
+                                        <div id="addAwardNum"></div>
+                                        <div id="delAwardNum"></div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="awardBoxTitle_holder" class="hideImp"></div>
+                            <div id="totalBox" class="totalBox">
+                                <div class="box">
+                                    <div class="awardDetail">
+                                        <p class="underLineWay">
+                                            <span class="fontWeight">基本选项</span>
+                                        </p>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine">
+                                            <span class="leftTitle2">
+                                                <span class="flag">*</span>
+                                                <div class="awardTitle">奖项等级：</div>
+                                            </span>
+                                                <input class="awardStyle" type="text" value="一等奖">
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">奖品类型：</div>
+                                        </span>
+                                                <div class="awardTypeSetBox awardTypeSetBox1">
+                                                    <div class="awardTypeValue awardTypeValue1">
+                                                        <span class="ng-binding">礼品</span>
+                                                        <div class="detailIcon"></div>
+                                                    </div>
+                                                    <div class="awardTypeBox awardTypeBox1 hide">
+                                                        <div class="option">
+                                                            <span class="ng-binding">礼品</span>
+                                                        </div>
+                                                        <div class="option checked">
+                                                            <span class="ng-binding">门店优惠券</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">电商优惠券</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">流量</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">视频会员</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">微信现金红包</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">微信优惠券</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tipsColor awardMg">活动发布后类型将无法更改</div>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖方式：</div>
+                                        </span>
+                                                <input id="directGetment0" class="hide" type="text">
+                                                <label class="checked" for="directGetment0">直接兑奖</label>
+                                                <input id="followGetment0" class="hide" type="text">
+                                                <label for="followGetment0">关注后兑奖</label>
+                                                <div class="tipsColor awardMg">玩家在奖品详情中点击“立即兑奖”后，填写手机号即可兑奖</div>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">选择礼品：</div>
+                                        </span>
+                                                <div class="awardTypeSetBox awardTypeSetBox2">
+                                                    <div class="awardTypeValue awardTypeValue2">
+                                                        <span class="ng-binding">1元全国三网话费</span>
+                                                        <div class="detailIcon"></div>
+                                                    </div>
+                                                    <div class="awardTypeBox awardTypeBox2 hide">
+                                                        <div class="option checked">
+                                                            <span class="ng-binding">1元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">2元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">5元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">10元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">20元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">30元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">50元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">100元全国三网话费</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">奖项数量：</div>
+                                        </span>
+                                            <input class="awardStyle" type="text" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="awardDetail">
+                                        <p class="underLineWay">
+                                            <span class="fontWeight">兑奖选项</span>
+                                        </p>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖方式：</div>
+                                        </span>
+                                                <input id="cashUnderline0" class="hide" type="text">
+                                                <label class="checked" for="cashUnderline0">线下兑奖</label>
+                                                <input id="cashWx0" class="hide" type="text">
+                                                <label for="cashWx0">公众号兑奖</label>
+                                                <span class="ask_quort"></span>
+                                                <input id="cashWeb0" class="hide" type="text">
+                                                <label for="cashWeb0">网页兑奖</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">操作提示：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="凭券联系现场工作人员兑奖">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">兑奖地址：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="请填写您的兑奖地址或者门店地址">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖期限：</div>
+                                        </span>
+                                                <input id="timeRangeType0" class="hide" type="text">
+                                                <label class="checked" for="directGetment0">固定日期</label>
+                                                <input id="termType0" class="hide" type="text">
+                                                <label for="followGetment0">固定时长</label>
+                                                <div class="codeTimeBox awardMg">
+                                                    <div id="timeRangeBox0" class="timeRangeBox">
+                                                        <input class="useCodeBeginTime" type="text" value="2018-09-15">至
+                                                        <input class="useCodeEndTime" type="text" value="2018-09-22">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="awardDetail">
+                                        <div class="seniorSetBoxOption underLineWay">
+                                            <span class="fontWeight">高级选项</span>
+                                            <div class="baseSeniorSet">
+                                                <span class="ng-binding bind1">更多设置</span>
+                                                <span class="roteteArrow"></span>
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox box1 hide">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="powerIcon"></span>
+                                            <div class="awardTitle">生成券号：</div>
+                                        </span>
+                                                <input id="sysAwardCode0" class="hide" type="text">
+                                                <label class="checked" for="sysAwardCode0">系统生成</label>
+                                                <input id="cusAwardCode0" class="hide" type="text">
+                                                <label for="cusAwardCode0">手工导入</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="powerIcon"></span>
+                                            <div class="awardTitle">核销方式：</div>
+                                        </span>
+                                                <input id="scanCodeCancel0" class="hide" type="text">
+                                                <label class="checked" for="scanCodeCancel0">输码/扫码核销</label>
+                                                <input id="autoCancel0" class="hide" type="text">
+                                                <label for="autoCancel0">自助核销</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <div class="awardTitle">可用时段：</div>
+                                        </span>
+                                                <input id="allTimeLimit0" class="hide" type="text">
+                                                <label class="checked" for="allTimeLimit0">全部时段</label>
+                                                <input id="someTimeLimit0" class="hide" type="text">
+                                                <label for="someTimeLimit0">部分时段</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                            <span class="leftTitle2">
+                                            <div class="awardTitle">副标题：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                             <span class="leftTitle2">
+                                            <div class="awardTitle">客服电话：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                             <span class="leftTitle2 titleTop">
+                                            <div class="awardTitle">兑奖须知：</div>
+                                        </span>
+                                                <textarea class="cashInfoContent"></textarea>
+                                            </div>
+                                            <div class="baseLine baseLine3 base12">
+                                        <span class="leftTitle2">
+                                            <div class="awardTitle">主办方介绍：</div>
+                                        </span>
+                                                <input id="closeHostInfo0" class="hide" type="text">
+                                                <label for="closeHostInfo0">关闭</label>
+                                                <input id="openHostInfo0" class="hide" type="text">
+                                                <label class="checked" for="openHostInfo0">开启</label>
+                                                <div class="hostTips">请在个人中心主办单位选择跳转链接或页面模板，否则将没有跳转效果</div>
+                                            </div>
+                                            <div class="baseLine baseLine3 base11">
+                                       <span class="leftTitle2">
+                                            <div class="awardTitle">自定义按钮：</div>
+                                        </span>
+                                                <input id="closeAwardBtn0" class="hide" type="text">
+                                                <label class="checked" for="closeAwardBtn0">关闭</label>
+                                                <input id="openAwardBtn0" class="hide" type="text">
+                                                <label for="openAwardBtn0">页面跳转</label>
+                                                <input id="newAttention0" class="hide" type="text">
+                                                <label for="newAttention0">一键关注</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="awardDetail">
+                                        <p class="underLineWay">
+                                            <span class="fontWeight">基本选项</span>
+                                        </p>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine">
+                                            <span class="leftTitle2">
+                                                <span class="flag">*</span>
+                                                <div class="awardTitle">奖项等级：</div>
+                                            </span>
+                                                <input class="awardStyle" type="text" value="二等奖">
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">奖品类型：</div>
+                                        </span>
+                                                <div class="awardTypeSetBox awardTypeSetBox1">
+                                                    <div class="awardTypeValue awardTypeValue1">
+                                                        <span class="ng-binding">礼品</span>
+                                                        <div class="detailIcon"></div>
+                                                    </div>
+                                                    <div class="awardTypeBox awardTypeBox1 hide">
+                                                        <div class="option">
+                                                            <span class="ng-binding">礼品</span>
+                                                        </div>
+                                                        <div class="option checked">
+                                                            <span class="ng-binding">门店优惠券</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">电商优惠券</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">流量</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">视频会员</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">微信现金红包</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">微信优惠券</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tipsColor awardMg">活动发布后类型将无法更改</div>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖方式：</div>
+                                        </span>
+                                                <input id="directGetment1" class="hide" type="text">
+                                                <label class="checked" for="directGetment1">直接兑奖</label>
+                                                <input id="followGetment1" class="hide" type="text">
+                                                <label for="followGetment1">关注后兑奖</label>
+                                                <div class="tipsColor awardMg">玩家在奖品详情中点击“立即兑奖”后，填写手机号即可兑奖</div>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">选择礼品：</div>
+                                        </span>
+                                                <div class="awardTypeSetBox awardTypeSetBox2">
+                                                    <div class="awardTypeValue awardTypeValue2">
+                                                        <span class="ng-binding">1元全国三网话费</span>
+                                                        <div class="detailIcon"></div>
+                                                    </div>
+                                                    <div class="awardTypeBox awardTypeBox2 hide">
+                                                        <div class="option checked">
+                                                            <span class="ng-binding">1元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">2元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">5元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">10元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">20元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">30元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">50元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">100元全国三网话费</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">奖项数量：</div>
+                                        </span>
+                                            <input class="awardStyle" type="text" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="awardDetail">
+                                        <p class="underLineWay">
+                                            <span class="fontWeight">兑奖选项</span>
+                                        </p>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖方式：</div>
+                                        </span>
+                                                <input id="cashUnderline2" class="hide" type="text">
+                                                <label class="checked" for="cashUnderline2">线下兑奖</label>
+                                                <input id="cashWx2" class="hide" type="text">
+                                                <label for="cashWx2">公众号兑奖</label>
+                                                <span class="ask_quort"></span>
+                                                <input id="cashWeb2" class="hide" type="text">
+                                                <label for="cashWeb2">网页兑奖</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">操作提示：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="凭券联系现场工作人员兑奖">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">兑奖地址：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="请填写您的兑奖地址或者门店地址">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖期限：</div>
+                                        </span>
+                                                <input id="timeRangeType3" class="hide" type="text">
+                                                <label class="checked" for="timeRangeType3">固定日期</label>
+                                                <input id="termType3" class="hide" type="text">
+                                                <label for="termType3">固定时长</label>
+                                                <div class="codeTimeBox awardMg">
+                                                    <div id="timeRangeBox0" class="timeRangeBox">
+                                                        <input class="useCodeBeginTime" type="text" value="2018-09-15">至
+                                                        <input class="useCodeEndTime" type="text" value="2018-09-22">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="awardDetail">
+                                        <div class="seniorSetBoxOption underLineWay">
+                                            <span class="fontWeight">高级选项</span>
+                                            <div class="baseSeniorSet">
+                                                <span class="ng-binding bind1">更多设置</span>
+                                                <span class="roteteArrow"></span>
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox box1 hide">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="powerIcon"></span>
+                                            <div class="awardTitle">生成券号：</div>
+                                        </span>
+                                                <input id="sysAwardCode4" class="hide" type="text">
+                                                <label class="checked" for="sysAwardCode4">系统生成</label>
+                                                <input id="cusAwardCode4" class="hide" type="text">
+                                                <label for="cusAwardCode4">手工导入</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="powerIcon"></span>
+                                            <div class="awardTitle">核销方式：</div>
+                                        </span>
+                                                <input id="scanCodeCancel4" class="hide" type="text">
+                                                <label class="checked" for="scanCodeCancel4">输码/扫码核销</label>
+                                                <input id="autoCancel4" class="hide" type="text">
+                                                <label for="autoCancel4">自助核销</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <div class="awardTitle">可用时段：</div>
+                                        </span>
+                                                <input id="allTimeLimit4" class="hide" type="text">
+                                                <label class="checked" for="allTimeLimit4">全部时段</label>
+                                                <input id="someTimeLimit4" class="hide" type="text">
+                                                <label for="someTimeLimit4">部分时段</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                            <span class="leftTitle2">
+                                            <div class="awardTitle">副标题：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                             <span class="leftTitle2">
+                                            <div class="awardTitle">客服电话：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                             <span class="leftTitle2 titleTop">
+                                            <div class="awardTitle">兑奖须知：</div>
+                                        </span>
+                                                <textarea class="cashInfoContent"></textarea>
+                                            </div>
+                                            <div class="baseLine baseLine3 base12">
+                                        <span class="leftTitle2">
+                                            <div class="awardTitle">主办方介绍：</div>
+                                        </span>
+                                                <input id="closeHostInfo4" class="hide" type="text">
+                                                <label for="closeHostInfo4">关闭</label>
+                                                <input id="openHostInfo4" class="hide" type="text">
+                                                <label class="checked" for="openHostInfo4">开启</label>
+                                                <div class="hostTips">请在个人中心主办单位选择跳转链接或页面模板，否则将没有跳转效果</div>
+                                            </div>
+                                            <div class="baseLine baseLine3 base11">
+                                       <span class="leftTitle2">
+                                            <div class="awardTitle">自定义按钮：</div>
+                                        </span>
+                                                <input id="closeAwardBtn4" class="hide" type="text">
+                                                <label class="checked" for="closeAwardBtn4">关闭</label>
+                                                <input id="openAwardBtn4" class="hide" type="text">
+                                                <label for="openAwardBtn4">页面跳转</label>
+                                                <input id="newAttention4" class="hide" type="text">
+                                                <label for="newAttention4">一键关注</label>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="awardDetail">
+                                        <p class="underLineWay">
+                                            <span class="fontWeight">基本选项</span>
+                                        </p>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine">
+                                            <span class="leftTitle2">
+                                                <span class="flag">*</span>
+                                                <div class="awardTitle">奖项等级：</div>
+                                            </span>
+                                                <input class="awardStyle" type="text" value="三等奖">
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">奖品类型：</div>
+                                        </span>
+                                                <div class="awardTypeSetBox awardTypeSetBox1">
+                                                    <div class="awardTypeValue awardTypeValue1">
+                                                        <span class="ng-binding">礼品</span>
+                                                        <div class="detailIcon"></div>
+                                                    </div>
+                                                    <div class="awardTypeBox awardTypeBox1 hide">
+                                                        <div class="option">
+                                                            <span class="ng-binding">礼品</span>
+                                                        </div>
+                                                        <div class="option checked">
+                                                            <span class="ng-binding">门店优惠券</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">电商优惠券</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">流量</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">视频会员</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">微信现金红包</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">微信优惠券</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tipsColor awardMg">活动发布后类型将无法更改</div>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖方式：</div>
+                                        </span>
+                                                <input id="directGetment0" class="hide" type="text">
+                                                <label class="checked" for="directGetment0">直接兑奖</label>
+                                                <input id="followGetment0" class="hide" type="text">
+                                                <label for="followGetment0">关注后兑奖</label>
+                                                <div class="tipsColor awardMg">玩家在奖品详情中点击“立即兑奖”后，填写手机号即可兑奖</div>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">选择礼品：</div>
+                                        </span>
+                                                <div class="awardTypeSetBox awardTypeSetBox2">
+                                                    <div class="awardTypeValue awardTypeValue2">
+                                                        <span class="ng-binding">1元全国三网话费</span>
+                                                        <div class="detailIcon"></div>
+                                                    </div>
+                                                    <div class="awardTypeBox awardTypeBox2 hide">
+                                                        <div class="option checked">
+                                                            <span class="ng-binding">1元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">2元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">5元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">10元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">20元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">30元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">50元全国三网话费</span>
+                                                        </div>
+                                                        <div class="option">
+                                                            <span class="ng-binding">100元全国三网话费</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">奖项数量：</div>
+                                        </span>
+                                            <input class="awardStyle" type="text" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="awardDetail">
+                                        <p class="underLineWay">
+                                            <span class="fontWeight">兑奖选项</span>
+                                        </p>
+                                        <div class="awardSettingBox">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖方式：</div>
+                                        </span>
+                                                <input id="cashUnderline5" class="hide" type="text">
+                                                <label class="checked" for="cashUnderline5">线下兑奖</label>
+                                                <input id="cashWx5" class="hide" type="text">
+                                                <label for="cashWx5">公众号兑奖</label>
+                                                <span class="ask_quort"></span>
+                                                <input id="cashWeb5" class="hide" type="text">
+                                                <label for="cashWeb5">网页兑奖</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">操作提示：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="凭券联系现场工作人员兑奖">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag"></span>
+                                            <div class="awardTitle">兑奖地址：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="请填写您的兑奖地址或者门店地址">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="flag">*</span>
+                                            <div class="awardTitle">兑奖期限：</div>
+                                        </span>
+                                                <input id="timeRangeType0" class="hide" type="text">
+                                                <label class="checked" for="directGetment0">固定日期</label>
+                                                <input id="termType0" class="hide" type="text">
+                                                <label for="followGetment0">固定时长</label>
+                                                <div class="codeTimeBox awardMg">
+                                                    <div id="timeRangeBox0" class="timeRangeBox">
+                                                        <input class="useCodeBeginTime" type="text" value="2018-09-15">至
+                                                        <input class="useCodeEndTime" type="text" value="2018-09-22">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="awardDetail">
+                                        <div class="seniorSetBoxOption underLineWay">
+                                            <span class="fontWeight">高级选项</span>
+                                            <div class="baseSeniorSet">
+                                                <span class="ng-binding bind1">更多设置</span>
+                                                <span class="roteteArrow"></span>
+                                            </div>
+                                        </div>
+                                        <div class="awardSettingBox box1 hide">
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="powerIcon"></span>
+                                            <div class="awardTitle">生成券号：</div>
+                                        </span>
+                                                <input id="sysAwardCode5" class="hide" type="text">
+                                                <label class="checked" for="sysAwardCode5">系统生成</label>
+                                                <input id="cusAwardCode5" class="hide" type="text">
+                                                <label for="cusAwardCode5">手工导入</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <span class="powerIcon"></span>
+                                            <div class="awardTitle">核销方式：</div>
+                                        </span>
+                                                <input id="scanCodeCancel5" class="hide" type="text">
+                                                <label class="checked" for="scanCodeCancel5">输码/扫码核销</label>
+                                                <input id="autoCancel5" class="hide" type="text">
+                                                <label for="autoCancel5">自助核销</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                        <span class="leftTitle2">
+                                            <div class="awardTitle">可用时段：</div>
+                                        </span>
+                                                <input id="allTimeLimit5" class="hide" type="text">
+                                                <label class="checked" for="allTimeLimit5">全部时段</label>
+                                                <input id="someTimeLimit5" class="hide" type="text">
+                                                <label for="someTimeLimit5">部分时段</label>
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                            <span class="leftTitle2">
+                                            <div class="awardTitle">副标题：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                             <span class="leftTitle2">
+                                            <div class="awardTitle">客服电话：</div>
+                                        </span>
+                                                <input class="awardStyle" type="text" value="">
+                                            </div>
+                                            <div class="baseLine baseLine3">
+                                             <span class="leftTitle2 titleTop">
+                                            <div class="awardTitle">兑奖须知：</div>
+                                        </span>
+                                                <textarea class="cashInfoContent"></textarea>
+                                            </div>
+                                            <div class="baseLine baseLine3 base12">
+                                        <span class="leftTitle2">
+                                            <div class="awardTitle">主办方介绍：</div>
+                                        </span>
+                                                <input id="closeHostInfo5" class="hide" type="text">
+                                                <label for="closeHostInfo5">关闭</label>
+                                                <input id="openHostInfo5" class="hide" type="text">
+                                                <label class="checked" for="openHostInfo5">开启</label>
+                                                <div class="hostTips">请在个人中心主办单位选择跳转链接或页面模板，否则将没有跳转效果</div>
+                                            </div>
+                                            <div class="baseLine baseLine3 base11">
+                                       <span class="leftTitle2">
+                                            <div class="awardTitle">自定义按钮：</div>
+                                        </span>
+                                                <input id="closeAwardBtn5" class="hide" type="text">
+                                                <label class="checked" for="closeAwardBtn5">关闭</label>
+                                                <input id="openAwardBtn5" class="hide" type="text">
+                                                <label for="openAwardBtn5">页面跳转</label>
+                                                <input id="newAttention5" class="hide" type="text">
+                                                <label for="newAttention5">一键关注</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settingBox" class="settingbox hide">
+                        <div class="hd_company_info">
+                            <div class="seniorSetBoxOption underLineWay">
+                                <span class="fontWeight">企业信息</span>
+                                <div class="baseSeniorSet">
+                                    <span class="ng-binding bind2">展开</span>
+                                    <span class="roteteArrow"></span>
+                                </div>
+                            </div>
+                            <div id="companySetBox" class="hide">
+                                <div id="uploadLogoWrap">
+                                    <div class="baseLine baseLine1">
+                                        <span class="leftTitle">企业Logo：</span>
+                                        <input id="hideLogo" class="openclose" type="radio">
+                                        <label class="hideLogo checked" for="hideLogo">隐藏</label>
+                                        <input id="showLogo" class="openclose" type="radio">
+                                        <label class="showLogo" for="showLogo">显示</label>
+                                    </div>
+                                    <div id="uploadLogo" class="commMg comUploadWarp ng-hide hide">
+                                        <div class="wxShareImg comUploadImg">
+                                            <img src="img/pic2.jpg" alt="">
+                                        </div>
+                                        <div class="comUploadBox chooseImg">
+                                            <span id="uploadButton" class="btn main-Button">
+                                                <input id="select_btn_4" class="selectbtn" type="file">
+                                                <a id="file_upload_4-button" class="uploadBtn" href="javascript:;">＋ 选择图片</a>
+                                            </span>
+                                                <p class="comUploadExplain">请上传jpg、bmp、png、gif格式的图片</p>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div id="menuBoxWrap">
+                                    <div class="baseLine baseLine1">
+                                        <span class="leftTitle">功能按钮：</span>
+                                        <input id="closeMenu" class="openclose" type="radio">
+                                        <label class="hideBtn" for="closeMenu">隐藏</label>
+                                        <input id="jumpPage" class="openclose" type="radio">
+                                        <label class="pressBtn jumpBtn checked" for="jumpPage">页面跳转</label>
+                                        <input id="attention" class="openclose" type="radio">
+                                        <label class="pressBtn lookBtn" for="attention">一键关注</label>
+                                    </div>
+                                    <div id="menuBox" class="commMg comUploadWarp ng-hide">
+                                        <div class="baseLine">
+                                            <span class="leftTitle2">
+                                                <span class="flag">*</span>
+                                                按钮名称：
+                                            </span>
+                                            <input class="awardStyle input2" type="text" value="企业官网">
+                                        </div>
+                                        <div class="baseLine1 base22">
+                                            <span class="leftTitle2">按钮链接：</span>
+                                            <input class="awardStyle input2" type="text" value="">
+                                        </div>
+                                        <div class="baseLine1 base21 hide">
+                                            <span class="leftTitle2">微信公众号：</span>
+                                            <div id="QRCodeBox" class="uploadQrCode">
+                                                <div class="QRImg comUploadImg">
+                                                    <img src="img/qrcodeImg.jpg" alt="">
+                                                </div>
+                                                <div class="QRloaBox comUploadBox chooseImg">
+                                                    <span id="QRloadButton" class="btn main-Button">
+                                                        <input id="selectbtn" class="selectbtn" type="file">
+                                                        <a id="file_upload_1-button" class="uploadBtn" href="javascript:;">＋ 上传二维码</a>
+                                                    </span>
+                                                    <a id="attentionUnderstand" class="comUploadExplain aTips hide" href="">如何找到公众号二维码？</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hd_share_info">
+                            <div class="seniorSetBoxOption underLineWay">
+                                <span class="fontWeight">分享设置</span>
+                                <div class="baseSeniorSet">
+                                    <span class="ng-binding">展开</span>
+                                    <span class="roteteArrow"></span>
+                                </div>
+                            </div>
+                            <div id="shareSetBox" class="hide">
+                                <div class="baseLine baseLine1">
+                                    <span class="leftTitle">分享活动：</span>
+                                    <input id="offForbidShareActivity" class="openclose" type="radio">
+                                    <label class="checked" for="offForbidShareActivity">开启分享</label>
+                                    <input id="onForbidShareActivity" class="openclose" type="radio">
+                                    <label for="onForbidShareActivity">关闭分享</label>
+                                </div>
+                                <div id="pushHeadImg_ForWX">
+                                    <div class="baseLine baseLine1 base31">
+                                        <span class="leftTitle">微信分享图标：</span>
+                                        <input id="defWxShare" class="openclose" type="radio">
+                                        <label class="default checked" for="defWxShare">默认</label>
+                                        <input id="cusWxShare" class="openclose" type="radio">
+                                        <label class="custom" for="cusWxShare">自定义</label>
+                                    </div>
+                                    <div id="uploadWxShare" class="comUploadWarp commMg hide">
+                                        <div class="wxShareImg comUploadImg">
+                                            <img src="img/ACgIABAEGAAgnfifvQUo_qONoAcwyAE4yAE.png" alt="">
+                                        </div>
+                                        <div class="comUploadBox chooseImg">
+                                            <span id="wxShareUploadButton" class="btn main-Button">
+                                                <input id="select_btn_1" class="selectbtn" type="file">
+                                                <a id="file_upload_2-button" class="uploadBtn" href="javascript:;">＋ 选择图片</a>
+                                            </span>
+                                            <p class="comUploadExplain">请上传5M以内，格式为jpg、bmp、png、gif的图片</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pushContain" class="baseLine1">
+                                    <div id="wxShareContainBox">
+                                        <span class="leftTitle">
+                                            <span class="powerIcon"></span>
+                                            微信分享内容：
+                                        </span>
+                                        <input id="defWxShareText" class="openclose" type="radio">
+                                        <label class="checked" for="defWxShareText">默认</label>
+                                        <input id="cusWxShareText" class="openclose" type="radio">
+                                        <label for="cusWxShareText">自定义</label>
+                                        <span class="seeDetail aTips">查看示例</span>
+                                    </div>
+                                    <p class="tipsColor commMg">注：页面及分享信息请遵守微信朋友圈管理规定，请勿出现违规信息，否则有可能导致活动分享到朋友圈仅自己可见</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hd_otherset_info">
+                            <div class="seniorSetBoxOption underLineWay">
+                                <span class="fontWeight">其他设置</span>
+                                <div class="baseSeniorSet">
+                                    <span class="ng-binding">展开</span>
+                                    <span class="roteteArrow"></span>
+                                </div>
+                            </div>
+                            <div class="hd_otherset_info_box hide">
+                                <div class="baseLine1 base41">
+                                    <span class="leftTitle">广告：</span>
+                                    <input id="ShowSkillSup" class="openclose" type="radio">
+                                    <label class="checked" for="ShowSkillSup">显示</label>
+                                    <input id="hideSkillSup" class="openclose" type="radio">
+                                    <label for="hideSkillSup">隐藏</label>
+                                </div>
+                                <p class="commMg baseLine tipsColor">隐藏广告需要单独购买 <a class="aTips skillLinkToShop" target="_blank">立即购买</a></p>
+                                <div class="baseLine1 base41">
+                                    <span class="leftTitle">标题图片：</span>
+                                    <input id="ShowTitle" class="openclose" type="radio">
+                                    <label class="checked" for="ShowTitle">显示</label>
+                                    <input id="HideTitle" class="openclose" type="radio">
+                                    <label for="HideTitle">隐藏</label>
+                                </div>
+                                <div class="baseLine1 base41">
+                                    <span class="leftTitle">页面加载图片：</span>
+                                    <input id="loadingDef" class="openclose" type="radio">
+                                    <label class="titleDef checked" for="loadingDef">默认</label>
+                                    <input id="loadingCustom" class="openclose" type="radio">
+                                    <label class="titleCus" for="loadingCustom">自定义</label>
+                                </div>
+                                <div id="loadingCustomBox" class="comUploadWarp commMg hide">
+                                    <div class="wxShareImg comUploadImg">
+                                        <img src="img/pic2.jpg" alt="">
+                                    </div>
+                                    <div class="comUploadBox chooseImg">
+                                            <span id="loadingCustomButton" class="btn main-Button">
+                                                <input id="select_btn_3" class="selectbtn" type="file">
+                                                <a id="file_upload_3-button" class="uploadBtn" href="javascript:;">＋ 选择图片</a>
+                                            </span>
+                                        <p class="comUploadExplain">请上传5M以内，格式为jpg、bmp、png、gif的图片</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,203 @@
+body{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+}
+.container{
+    padding:28px;
+}
+.wxgzhInfoBox{
+    width:100%;
+}
+.inlineBlock{
+    display: inline-block;
+}
+.acctInfo{
+    margin-bottom:28px;
+}
+.main-whiteBox{
+    background-color:#fff;
+    border:1px solid #e7e7e7;
+}
+
+.acctInfoTitle{
+    margin-bottom:32px;
+}
+.columnTitle,.columnTitle1{
+    font-size:16px;
+    padding-left:16px;
+    line-height:55px;
+    border-bottom:1px solid #e7e7e7;
+    position: relative;
+}
+
+.acctInfoLine{
+    margin-bottom:32px;
+    line-height:14px;
+    padding:0 16px;
+}
+.acctInfoSubTitle:before{
+    content: '';
+    display: inline-block;
+    width:4px;
+    height:19px;
+    background:#329fea;
+    vertical-align: middle;
+    margin-right:8px;
+    margin-top:-2px;
+}
+.acctInfo a:hover {
+    color: #329fea;
+}
+.hostUnit{
+    border-top:1px solid #e7e7e7;
+    padding-top:32px;
+}
+.titleName{
+    padding-right:8px;
+    display: inline-block;
+}
+.powerIcon{
+    width:20px;
+    height:20px;
+    display: inline-block;
+    vertical-align: -3px;
+    background:url("../img/iconAll.png")no-repeat;
+}
+.ver_free{
+    background-position:-311px -587px;
+}
+.acctInfo a{
+    color:#74b7e6;
+    text-decoration:underline;
+    cursor: pointer;
+}
+.acctInfo a.update{
+    margin-left:22px;
+}
+.wxgzhContent{
+    height:164px;
+}
+.authorizedStatu {
+    position: relative;
+}
+.compLink {
+    padding: 28px 16px;
+    border-bottom: solid 1px #e7e7e7;
+}
+.samllColumnTitle {
+    font-size: 14px;
+    padding: 0;
+    line-height: 14px;
+    border: 0;
+}
+.columnTitle:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 19px;
+    background: #329fea;
+    margin-right: 8px;
+    margin-top: -2px;
+}
+.myInfo_tips {
+    color: #b1b1b1;
+    margin-top: 16px;
+    display: inline-block;
+}
+.myInfo_link{
+    color: #888;
+    text-decoration: underline;
+    margin-left: 15px;
+}
+.myInfo_link:hover{
+    color:#329fea;
+}
+.wxApplication{
+    background: #fff;
+    position: relative;
+    padding: 16px 6px;
+    border: 1px solid #e7e7e7;
+    border-top: 0;
+}
+.wxApplication .columnTitle {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.samllColumnTitle {
+    font-size: 14px;
+    padding: 0;
+    line-height: 14px;
+    border: 0;
+}
+.appBox{
+    font-size:0;
+}
+.appItem{
+    width: 485px;
+    height: 108px;
+    float: left;
+    border: 1px solid #e7e7e7;
+    position: relative;
+    margin: 0 10px 20px;
+}
+.wxlogo{
+    width:107px;
+    height:108px;
+    border-right: 1px solid #e7e7e7;
+    float: left;
+    margin-right: 16px;
+}
+.mp1{
+    background:url("../img/mp01.jpg");
+}
+.mp2{
+    background:url("../img/mp02.jpg");
+}
+.mp3{
+    background:url("../img/mp03.jpg");
+}
+.mp4{
+    background:url("../img/mp04.jpg");
+}
+.mp5{
+    background:url("../img/mp06.jpg");
+}
+
+.appDisc{
+    font-size:14px;
+    margin-top:18px;
+}
+.appDisc a{
+    color: #000;
+}
+.appDisc a:hover{
+    color:#329fea;
+}
+.appNead{
+    margin-top:8px;
+    font-size:12px;
+    color: #888;
+}
+.appBtn {
+    width: 110px;
+    height: 34px;
+    position: absolute;
+    border: solid 1px #b1b1b1;
+    background: #b1b1b1;
+    color: #fff;
+    right: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 34px;
+    font-size: 14px;
+    text-align: center;
+    cursor: default;
+}
+
+

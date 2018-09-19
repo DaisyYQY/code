@@ -22,11 +22,9 @@ $(function () {
 
     $.get("json/data1.json",function (data) {
         var topSpan = document.querySelectorAll('.newCategoryItem>.column');
-        //console.log(topSpan);
         $.each(data,function (i) {
             var oList = data[i];
-            //console.log(data[i].staticPic);
-            var oCon = $('<div class="hdModel"> ' +
+            var oCon = $('<div class="hdModel" name="'+oList.id+'"> ' +
                 '<div class="actPic"> ' +
                 '<img class="static" src="'+oList.staticPic+'" alt=""> ' +
                 '<img class="hover" src="'+oList.hoverPic+'" alt=""> ' +
@@ -43,19 +41,16 @@ $(function () {
             $(".activeContent").append(oCon);
 
         });
-
         for (let j = 0; j < topSpan.length; j++) {
             typeName = $(topSpan[j]).children().html();
 
             $(topSpan[j]).click(function () {
                 typeName=$(this).children('').html()
-                //console.log(typeName);
                 $(".activeContent").html('');
 
                 for (var k = 0; k < data.length; k++) {
-                    //console.log(data[k].type);
                     if (data[k].type == typeName) {
-                        var oCon = $('<div class="hdModel"> ' +
+                        var oCon = $('<div class="hdModel" name="'+data[k].id+'"> ' +
                             '<div class="actPic"> ' +
                             '<img class="static" src="'+data[k].staticPic+'" alt=""> ' +
                             '<img class="hover" src="'+data[k].hoverPic+'" alt=""> ' +
@@ -71,8 +66,7 @@ $(function () {
                         $(".activeContent").append(oCon);
                     }
                     if (typeName == '全部') {
-                        console.log(data.staticPic);
-                        var oCon = $('<div class="hdModel"> ' +
+                        var oCon = $('<div class="hdModel" name="'+data[k].id+'"> ' +
                             '<div class="actPic"> ' +
                             '<img class="static" src="'+data[k].staticPic+'" alt=""> ' +
                             '<img class="hover" src="'+data[k].hoverPic+'" alt=""> ' +
@@ -97,7 +91,6 @@ $(function () {
 
 
         var topSpan1 = document.querySelectorAll('.newCategoryBox3 .slideBox>.column');
-
         for (let j1 = 0; j1 < topSpan1.length; j1++) {
             //typeName1 = $(topSpan1[j1]).children().html();
 
@@ -110,7 +103,7 @@ $(function () {
                     //console.log(data[k1].festival);
                     if (data[k1].festival == typeName1){
                         //console.log(data[k1].staticPic);
-                        var oCon = $('<div class="hdModel"> ' +
+                        var oCon = $('<div class="hdModel" name="'+data[k1].id+'"> ' +
                                 '<div class="actPic"> ' +
                                 '<img class="static" src="'+data[k1].staticPic+'" alt=""> ' +
                                 '<img class="hover" src="'+data[k1].hoverPic+'" alt=""> ' +
@@ -128,7 +121,7 @@ $(function () {
                     if (typeName1 == '全部节日') {
                         //console.log(data.staticPic);
                         if (data[k1].type == '节日') {
-                            var oCon = $('<div class="hdModel"> ' +
+                            var oCon = $('<div class="hdModel" name="'+data[k1].id+'"> ' +
                                 '<div class="actPic"> ' +
                                 '<img class="static" src="' + data[k1].staticPic + '" alt=""> ' +
                                 '<img class="hover" src="' + data[k1].hoverPic + '" alt=""> ' +
@@ -150,7 +143,6 @@ $(function () {
         }
 
 
-
         var topSpan2 = document.querySelectorAll('.newCategoryBox4 .slideBox>.column');
         for (let j2 = 0; j2 < topSpan2.length; j2++) {
 
@@ -162,7 +154,7 @@ $(function () {
                     //console.log(data[k1].festival);
                     if (data[k2].activeType == typeName2){
                         //console.log(data[k1].staticPic);
-                        var oCon = $('<div class="hdModel"> ' +
+                        var oCon = $('<div class="hdModel" name="'+data[k2].id+'"> ' +
                             '<div class="actPic"> ' +
                             '<img class="static" src="'+data[k2].staticPic+'" alt=""> ' +
                             '<img class="hover" src="'+data[k2].hoverPic+'" alt=""> ' +
@@ -180,7 +172,7 @@ $(function () {
                     if (typeName2 == '全部') {
                         //console.log(data.staticPic);
                         if (data[k2].type == '游戏营销') {
-                            var oCon = $('<div class="hdModel"> ' +
+                            var oCon = $('<div class="hdModel" name="'+data[k2].id+'"> ' +
                                 '<div class="actPic"> ' +
                                 '<img class="static" src="' + data[k2].staticPic + '" alt=""> ' +
                                 '<img class="hover" src="' + data[k2].hoverPic + '" alt=""> ' +
@@ -205,7 +197,6 @@ $(function () {
 
         }
 
-
     },"json");
 
     $('.activeContent').on('mouseenter','.hdModel',function () {
@@ -215,7 +206,65 @@ $(function () {
     $('.activeContent').on('mouseleave','.hdModel',function () {
         $(this).removeClass('active');
     });
+    $('.activeContent').on("click",".hdModel", function () {
+        var num=$(this).index()+1;
+        $.get("json/data1.json",function (data) {
+            $.each(data,function (i) {
+                var oList1 = data[i];
+                var oId=oList1.id;
+                if(oId==num){
+                    var oCon = $('<div class="poupContent" name="'+oList1.id+'"> ' +
+                        '<div class="showqrCodeBtn"> ' +
+                        '<div class="qrCodeIcon"></div> ' +
+                        '<div class="qrCodeText">扫码</div> ' +
+                        '</div> ' +
+                        '<div class="closeBtn"></div> ' +
+                        '<div class="leftBox"> ' +
+                        '<div class="leftImgCont"> ' +
+                        '<img src="'+oList1.bigImg+'" alt=""> ' +
+                        '<div class="startBtn"> ' +
+                        '<img src="'+oList1.startImg+'" alt=""> ' +
+                        '</div> ' +
+                        '</div> ' +
+                        '<div class="waitImgCont hide"> ' +
+                        '<img src="img/loading.gif" alt=""> ' +
+                        '</div> ' +
+                        '<div class="gameframe hide"> ' +
+                        '<iframe class="gameiframe" style="margin-right:1rem" width="272px" height="470px"; scrolling="auto" src=""></iframe> ' +
+                        '</div> ' +
+                        '<div class="maskBg hide"> ' +
+                        '<div class="showQrCodeBox"> ' +
+                        '<div class="qrCodeImg"> ' +
+                        '<img src="'+oList1.qrCodeImg+'" alt=""> ' +
+                        '</div> ' +
+                        '<div class="qrCodeTxt">微信扫一扫体验活动</div> ' +
+                        '</div> ' +
+                        '</div> ' +
+                        '</div> ' +
+                        '<div class="rightBox"> ' +
+                        '<div class="actName1">'+oList1.actName1+'</div> ' +
+                        '<div class="actExpTitle">玩法介绍</div> ' +
+                        '<div class="actExp_New">'+oList1.actExp_New+'</div> ' +
+                        '<div class="marketingTitle">营销功能</div> ' +
+                        '<div class="marketing"></div> ' +
+                        '<div class="main-Btn">创建</div> ' +
+                        '</div> ' +
+                        '</div>');
 
+                    $(window.parent.document).find("#project-modal").html("");
+                    $(window.parent.document).find("#project-modal").append(oCon);
+
+                    $.each(oList1.marketing, function (k) {
+                        var oCon11=$('<div class="marketItem">'+oList1.marketing[k].marketItem+'</div> ')
+                        $(window.parent.document).find(".marketing").append(oCon11);
+                    })
+
+                }
+
+            });
+
+        },"json");
+    });
     $('.newCategoryItem>.column').click(function () {
         $('.newCategoryItem>.column').removeClass('active');
         $(this).addClass('active');
@@ -321,7 +370,6 @@ $(function () {
 
 })
 $(window).scroll(function () {
-    console.log(1);
     if($(window).scrollTop>=200){
         $('.staticClass')[0].style.position='fixed';
         $('#activeTwo').css({'top':0,'z-index':100});

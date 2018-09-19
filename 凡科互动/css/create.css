@@ -107,7 +107,7 @@ html::-webkit-scrollbar-track {/*滚动条里面轨道*/
     background:url("../img/iconAll.png")no-repeat -212px -617px;
 }
 .topBarWrap{
-    width:100%;
+    width:1160px;
     height:56px;
     border-bottom:1px solid #e7e7e7;
     margin-bottom:10px;
@@ -119,13 +119,13 @@ html::-webkit-scrollbar-track {/*滚动条里面轨道*/
     position: relative;
 }
 .topBar{
-    width:10145px;
+    width:1090px;
     position: relative;
     left:0;
     transition:left .1s;
 }
 .topBar .column{
-    width:88px;
+    width:85px;
     height:100%;
     line-height:56px;
     display: inline-block;
@@ -357,7 +357,7 @@ html::-webkit-scrollbar-track {/*滚动条里面轨道*/
     margin-bottom:20px;
     margin-top:16px;
     min-height:35px;
-    line-height:46px!important;
+    line-height:46px;
     position: relative;
 }
 .ng-prisyine{
@@ -712,6 +712,373 @@ label.checked:after{
     top:40px;
     right:4px;
 }
+.settingbox{
+    margin-top:20px;
+    border:1px solid #e6e6e6;
+}
+#awardBox{
+    position: relative;
+    width:601px;
+    overflow: hidden;
+}
+#awardBoxTitle{
+    /*position: absolute;*/
+    top:72px;
+    left:451px;
+}
+#awardBoxTitle_holder{
+    width:603px;
+    height:78px;
+}
+.hideImp{
+    display: none;
+}
+.totalBox{
+    width:3000px;
+    position: relative;
+    left: 0;
+    transition:all .1s;
+}
+.box{
+    padding:10px 0;
+    display: inline-block;
+    margin-right:45px;
+}
+.awardNums{
+    padding:10px;
+    background:#f5f5f5;
+}
+.topAwardExplain{
+    margin:auto;
+    color: #5c5c5c;
+    line-height:22px;
+    text-align:left;
+}
+.awardNums>div{
+    float: right;
+}
+#comfortSetting{
+    display: none;
+    margin-right:5px;
+}
+.comfortSet{
+    display: inline-block;
+    margin-right:7px;
+    padding-left:16px;
+    position: relative;
+    overflow: visible;
+    white-space: nowrap;
+    float: none;
+    font-size:14px;
+    cursor: pointer;
+}
+.comfortSet:before{
+    content: '';
+    width:10px;
+    height:10px;
+    border:1px solid #ccc;
+    margin:0;
+    position: absolute;
+    top:4px;
+    bottom:0;
+    left:0;
+    border-radius:0;
+}
+.awardLevelBox{
+    background:#f5f5f5;
+    height:36px;
+    line-height:36px;
+    position: relative;
+}
+.awardLevelItem{
+    display: inline-block;
+    cursor: pointer;
+    width:60px;
+    position: relative;
+    text-align: center;
+}
+.selected{
+    color:#19a6ff;
+    background:#fff;
+}
+.awardNumOptBox{
+    position: absolute;
+    top:10px;
+    right:20px;
+    height:15px;
+    line-height: 15px;
+    display: block;
+}
+.awardNumOptBox>div{
+    width:15px;
+    height:15px;
+    display: inline-block;
+    background:url("../img/iconAll.png")no-repeat;
+}
+#addAwardNum{
+    background-position:-708px -699px;
+}
+#addAwardNum:hover{
+    background-position:-740px -699px;
+}
+#delAwardNum{
+    background-position:-784px -699px;
+    margin-left:9px;
+}
+#delAwardNum:hover{
+    background-position:-816px -699px;
+}
+.awardSettingBox{
+    position: relative;
+    width:100%;
+    top:0;
+}
+.baseLine{
+    position: relative;
+}
+.leftTitle2{
+    width:100px;
+    display: inline-block;
+    text-align:right;
+    padding-right:16px;
+}
+.leftTitle2 .flag{
+    display: inline-block;
+    width:14px;
+    font-size: 16px;
+    text-align: center;
+    color:#fe896a;
+    vertical-align: middle;
+    margin:0 1px;
+}
+.leftTitle2 .awardTitle{
+    display: inline-block;
+    text-align: right;
+}
+.awardStyle{
+    height:44px;
+    border:1px solid #e7e7e7;
+    outline: 0;
+    width:346px;
+    padding-left:8px;
+    box-sizing: border-box;
+}
+.awardTypeSetBox{
+    display: inline-block;
+}
+.awardTypeValue{
+    width:426px;
+    display:inline-block;
+    border:1px solid #e7e7e7;
+    background-color:#fff;
+    height:44px;
+    line-height:44px;
+    position: relative;
+    padding-left:8px;
+}
+.baseLine3{
+    line-height: 44px;
+    margin:12px 0 10px;
+}
+.awardMg{
+    margin-left:120px;
+}
+.detailIcon{
+    float: right;
+    width:20px;
+    height:12px;
+    background:url("../img/iconAll.png")-721px -622px no-repeat;
+    margin:15px 12px 0 0;
+}
+.awardTypeBox{
+    position: absolute;
+    /*top:0;*/
+    /*left:0;*/
+    width:434px;
+    border:1px solid #e7e7e7;
+    border-top: 0;
+    background:#fff;
+    z-index:1;
+}
+.awardTypeBox .option{
+    padding-left:8px;
+    cursor: default;
+    line-height: 44px;
+}
+.awardTypeBox .option.checked{
+    background:#3896dc;
+    color: #fff;
+}
+.ask_quort{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/iconAll4.png) -336px -698px no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.timeRangeBox input{
+    width:202px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+    padding-left: 8px;
+    display: inline-block;
+}
+
+.hostTips{
+    margin-left: 120px;
+    color:#949494;
+}
+.base11{
+    margin-top: 0;
+}
+.base12{
+    margin-bottom: 0;
+}
+.cashInfoContent{
+    width: 434px;
+    height: 120px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: 5px;
+    border: 1px solid #e7e7e7;
+}
+.titleTop{
+    vertical-align:top;
+}
+#settingBox{
+    border:none;
+}
+#baseSetting{
+    border:none;
+}
+
+#menuBox{
+    border:1px solid #e7e7e7;
+    background:#fff;
+    padding:10px;
+    overflow: hidden;
+    margin-top:8px;
+}
+.input2{
+    width:140px;
+}
+#QRCodeBox{
+    display: inline-block;
+}
+.comUploadImg{
+    width:52px;
+    height:52px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.comUploadImg img{
+    width:100%;
+    height:100%;
+}
+.comUploadBox{
+    display: inline-block;
+    margin-left:10px;
+    vertical-align:middle;
+}
+.selectbtn{
+    width:87%;
+    position: absolute;
+    z-index: 1;
+    opacity:0;
+    cursor:pointer;
+    top: 4px;
+    left: 12px;
+}
+.base21{
+    margin:16px 0 0;
+    line-height: 35px;
+}
+.btn{
+    width:96px;
+    height:32px;
+    line-height:32px;
+    background:#329fea;
+    color: #fff;
+    display: block;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.uploadBtn{
+    position: absolute;
+    color: #fff;
+    top:0;
+    left:0;
+    text-align: center;
+    display: inline-block;
+    width:100%;
+}
+.base31{
+    height:35px;
+    line-height:35px;
+}
+.comUploadWarp{
+    margin-top: 5px;
+    padding:4px;
+    border:1px solid #e7e7e7;
+}
+.wxShareImg{
+    display: inline-block;
+    width:80px;
+    height:80px;
+    overflow: hidden;
+    vertical-align: middle;
+    position: relative;
+}
+
+.comUploadExplain{
+    margin-top:8px;
+    color: #808080;
+    line-height: normal;
+}
+#pushContain{
+    line-height:22px;
+    margin-top:4px;
+}
+.hd_otherset_info_box .base41{
+    margin-top:0;
+}
+.skillLinkToShop{
+    cursor:pointer;
+}
+
+#drawLimit{
+    line-height: 44px;
+    width: 52px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+    padding-left: 8px;
+    display: inline-block;
+}
+.scrollright{
+    background-position:-824px -771px;
+    right:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/myActive.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/myActive.js"></script>
+</head>
+<body>
+<div id="myActContainer" class="container">
+    <div id="tableContent" class="tableContent">
+        <div class="myActContainTitle">
+            <div class="tableTitleName">我的活动</div>
+            <div id="recycleBinTitle" class="main-Button">
+                <span class="icon"></span>活动回收站(
+                <span class="actNum">6</span>)
+            </div>
+            <div id="clearRecycleBox" class="main-Button hide">
+                <span class="icon">清空回收站</span>
+            </div>
+        </div>
+        <div id="showActiveTable" class="showActiveTable">
+            <div class="faiTableWrap">
+                <div class="center">
+                    <table class="faiTable" cellpadding="0" cellspacing="0">
+                        <thead>
+                        <tr class="scrollFixedTr">
+                            <th class="sep cloumn1"><div class="padding">活动名称</div></th>
+                            <th class="sep column2"><div class="padding">活动编号</div></th>
+                            <th class="sep column3"><div class="padding">活动时间</div></th>
+                            <th class="sep column4">
+                                <div class="padding">全部状态
+                                    <span class="icon"></span>
+                                </div>
+                                <div class="faiTable_poupBox dropDownBox_sub hide">
+                                    <div class="optionsWarp">
+                                        <div class="options primary">全部状态</div>
+                                        <div class="options">未发布</div>
+                                        <div class="options">未开始</div>
+                                        <div class="options">进行中</div>
+                                        <div class="options">已结束</div>
+                                        <div class="options">违规关闭</div>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="sep column5"><div class="padding">参与人数/最大限制</div></th>
+                            <th class="sep column6"><div class="padding">活动剩余资产<span class="icon"></span></div></th>
+                            <th class="sep column7"><div class="padding">操作</div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javascript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javascript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javaScript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javaScript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javascript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javascript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javascript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javascript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javascript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textLeft ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        <div class="qrcodeIcon"></div>
+                                        <div class="imgBox"><img src="img/AAEIABACGAAg14m5zQUo7u2_igUwwgM4_gE.jpg" alt=""></div>
+                                        <div class="textBox">
+                                            <a href="javascript:;">参与活动赢大奖</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textCenter">HD50</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>
+                                        2018-09-16 17:19:47
+                                        <br>
+                                        2018-09-23 17:19:47
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div>未发布</div>
+                                </div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap">0/100</div>
+                            </td>
+                            <td class="textCenter ellipsis">
+                                <div class="padding ellipsis tdWrap"></div>
+                            </td>
+                            <td class="textRight ellipsis">
+                                <div class="padding ellipsis tdWrap">
+                                    <div class="textRight">
+                                        <a href="">发布</a>
+                                        <a href="">编辑</a>
+                                        <a href="">预览</a>
+                                        <a class="moreSelect" href="javascript:;">更多 <span class="icon"></span></a>
+                                        <div class="moreOptionBox hide">
+                                            <div class="tipsBoxArrow"></div>
+                                            <a href="#">复制</a>
+                                            <a href="#">渠道管理</a>
+                                            <a href="#">删除</a>
+                                            <a href="#">传播数据</a>
+                                            <a href="#">获奖名单</a>
+                                            <a href="#">配置核销员</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bottom">
+                    <div class="total">
+                        <span class="allTotal">共有 44 条记录 ，每页显示</span>
+                        <div class="dropDownBox">
+                            <div class="dropDownArea">10</div>
+                            <div class="faiTable_poupBox optionsBox hide">
+                                <div class="options">10</div>
+                                <div class="options">50</div>
+                                <div class="options">100</div>
+                                <div class="options">500</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pageBox">
+                        <div class="page">
+                            <a href="javascript:;" class="prevPage disabledBtn"></a>
+                            <span class="currentPage">1 / 5</span>
+                            <a href="javascript:;" class="nextPage pointer"></a>
+                        </div>
+                        <span class="pageJump">
+                            <input class="jumpInput" type="text" value="1">
+                            <div class="jumpSubmit pointer">跳转</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mask"></div>
+</body>
+</html>
